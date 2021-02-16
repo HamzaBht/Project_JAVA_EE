@@ -1,0 +1,26 @@
+Cahier de charge :
+    
+    Définition de projet :
+    Une plateforme qui se présente sous forme d'un comparateur de vols des compagnies aériennes,
+    ceci va se baser sur des informations sur les vols de ces compagnies,
+    dont le but de donner les résultats de comparaison selon les détails des vols souhaités.
+    
+    Objectif du Projet : 
+        L'objectif du projet se résume en offrir la possibilité à l'utilisateur de comparer 
+        les offres disponibles et s'en sortir avec celui qui lui convient le plus .
+    Description de la cible : 
+            L'audience visé par la plateforme c'est tout voyageur cherchant un meilleur deal
+            pour ses billets de voyage , face à tous ces offres des compagnies aériennes .
+    Parcours Utilisateur :
+                L'utilisateur commence par la saisie des données de son vols et les détails 
+                souhaités (date départ , date arrivée , aéroport départ , aéroport arrivée,
+                choix de vols directs , ...) . Ensuite , ce dernier choisit l'offre qui lui convient,
+                et en cas de décision d'un vol , il peut accéder au site direct de la compagnie aérienne
+                choisie .
+    Spécifités Techniques :
+                    Conception : PlantUML
+                    Front-end : Sera développé en HTML , CSS , JS .
+                    Back-end : Java EE 
+                    REST API
+                    Hebergement : DOCKER 
+    
