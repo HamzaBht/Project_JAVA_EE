@@ -1,1 +1,58 @@
-soos
+@startuml Vols
+class Vol{
+    -int ID
+    -date dateDepart
+    -date dateArrivee
+    -time heureDepart
+    -time heureArrivee
+    -double price
+    +ouvrirReservation()
+    +fermerReservation()
+    +calculerDuree()
+}
+class Reservation{
+    -int ID
+    -date dateReservation
+    -time heureReservation
+}
+class Client{
+    -int ID
+    -String nom
+    -String prenom
+    -String numeroPassport
+}
+class Aeroport{
+    -int ID
+    -String nom
+}
+class Ville{
+    -String nom
+}
+class Cabine{
+    -String typeCabine
+    -int Capacite
+}
+class infoEscale{
+    -time heureDepart
+    -time heureArrivee
+}
+class Pays{
+    -String nom
+}
+class CompagnieAerienne{
+    -String nom
+}
+Reservation "0..*" --  "1" Vol :concerne 
+Reservation "0..*" --  "1" Client :effectue 
+Vol "1..*" -- "1" Cabine :contient
+Aeroport "0..*" -- "1..*" Ville :represente
+Aeroport "1" -- "0..*" Vol : Depart
+Aeroport "1" -- "0..*" Vol : Arrivee
+Aeroport "1" -- "0..*" Vol : Escale
+(Aeroport,Vol)..infoEscale
+Ville "1..*" -- "1" Pays :se trouve
+CompagnieAerienne "1" -- "1..*" Vol :propose
+
+
+
+@enduml
