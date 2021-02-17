@@ -29,19 +29,22 @@ class Ville{
     -String nom
 }
 class Cabine{
+    -int ID
     -String typeCabine
     -int Capacite
 }
 class infoEscale{
+    -int ID
     -time heureDepart
     -time heureArrivee
+    -date dateDepart
+    -date dateArrivee
 }
 class Pays{
+    -int ID
     -String nom
 }
-class CompagnieAerienne{
-    -String nom
-}
+
 Reservation "0..*" --  "1" Vol :concerne 
 Reservation "0..*" --  "1" Client :effectue 
 Vol "1..*" -- "1" Cabine :contient
@@ -51,7 +54,7 @@ Aeroport "1" -- "0..*" Vol : Arrivee
 Aeroport "1" -- "0..*" Vol : Escale
 (Aeroport,Vol)..infoEscale
 Ville "1..*" -- "1" Pays :se trouve
-CompagnieAerienne "1" -- "1..*" Vol :propose
+
 
 
 
