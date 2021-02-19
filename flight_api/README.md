@@ -43,4 +43,4 @@ to add a new flight a user can send a `POST` request to the same URI with `JSON`
 
 ## TODO
 
-- [] allow only authorized users to send POST requests, users should send a valide username and password
+- [ ] allow only authorized users to send POST requests, users should send a valide username and password
