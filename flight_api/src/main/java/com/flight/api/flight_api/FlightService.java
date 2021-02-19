@@ -30,15 +30,19 @@ public class FlightService {
 
         Jsonb jsonb = JsonbBuilder.create();
         Flight flight = jsonb.fromJson(flightJson, Flight.class);
+
         try{
             airlineDataService.AddFlight(flight);
             response = Response.ok(flight.toString()).build();
             return response;
         }
-        catch (ModelNotExistingException e){
-            response = Response.serverError().entity("Invalid Aircraft Model").build();
+        catch (AircraftNotExistingException e){
+            response = Response.serverError().entity(
+                    "Aircraft doesn't exist\nID : "
+                            +flight.getAircraft().getID()+"\nCapacity : "
+                            +flight.getAircraft().getTotalCapacity()
+            ).build();
             return response;
         }
     }
-
 }
