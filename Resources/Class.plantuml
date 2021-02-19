@@ -33,13 +33,6 @@ class Cabine{
     -String typeCabine
     -int Capacite
 }
-class infoEscale{
-    -int ID
-    -time heureDepart
-    -time heureArrivee
-    -date dateDepart
-    -date dateArrivee
-}
 class Pays{
     -int ID
     -String nom
@@ -51,8 +44,6 @@ Vol "1..*" -- "1" Cabine :contient
 Aeroport "0..*" -- "1..*" Ville :represente
 Aeroport "1" -- "0..*" Vol : Depart
 Aeroport "1" -- "0..*" Vol : Arrivee
-Aeroport "1" -- "0..*" Vol : Escale
-(Aeroport,Vol)..infoEscale
 Ville "1..*" -- "1" Pays :se trouve
 
 
