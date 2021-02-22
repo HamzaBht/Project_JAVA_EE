@@ -6,6 +6,7 @@ class Vol{
     -time heureDepart
     -time heureArrivee
     -double price
+    -Boolean isReservationAvailable
     +ouvrirReservation()
     +fermerReservation()
     +calculerDuree()
