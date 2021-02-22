@@ -1,7 +1,6 @@
 @startuml Vols
 class Flight{
     - flightnumber : int 
-    - state : FlightState
     - aircraft : Aircraft
     - departureInfo : DepartureArrivalInfo
     - arrivalInfo : DepartureArrivalInfo
@@ -12,20 +11,6 @@ class DepartureArrivalInfo{
     - time : Date
     - airport : Airpot
 }
-enum FlightState{
-    Scheduled
-    Delayed
-    Departed
-    InAir
-    Expected
-    Diverted
-    Recovery
-    Landed
-    Arrived
-    Cancelled
-    NoTrackInfo
-    PastFlight
-
 class Reservation{
     -int ID
     -date dateReservation
@@ -71,8 +56,7 @@ Flight "1..*" -- "1" Aircraft :concern
 City "1..*" -- "0..*" Airport :represente
 City "1..*" -- "1" Pays :se trouve
 Flight --* DepartureArrivalInfo
-Flight --* FlightState
-DepartureArrivalInfo -- Airport : Depart""
+DepartureArrivalInfo -- Airport : "Depart"
 Airport -- DepartureArrivalInfo : "Arrivee"
 Aircraft -- Cabine : "have"
 Cabine -- CabineClasses : "is"
