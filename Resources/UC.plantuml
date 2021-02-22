@@ -1,0 +1,15 @@
+@startuml
+
+title Comparateur de vol
+
+left to right direction
+
+actor client
+package compare {
+  client -- (Choose flight)
+  client -- (Choose options)
+  (Choose flight) .> (Choose options) : include
+}
+
+
+@enduml
