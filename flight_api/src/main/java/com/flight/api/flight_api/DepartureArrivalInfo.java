@@ -1,16 +1,14 @@
 package com.flight.api.flight_api;
 
-import javax.json.bind.annotation.JsonbCreator;
-import javax.json.bind.annotation.JsonbProperty;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DepartureArrivalInfo {
-    @JsonbCreator
-    public DepartureArrivalInfo(@JsonbProperty("day") String day,
-                                @JsonbProperty("time") String time,
-                                @JsonbProperty("airport") Airport airport) {
+    public DepartureArrivalInfo(String day,
+                                String time,
+                                Airport airport) {
         this.day = day;
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         try {

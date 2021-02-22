@@ -1,17 +1,11 @@
 package com.flight.api.flight_api;
 
-
-import javax.json.bind.annotation.JsonbCreator;
-import javax.json.bind.annotation.JsonbProperty;
-import java.util.ArrayList;
-
 public class Flight {
-    @JsonbCreator
-    public Flight(@JsonbProperty("state") FlightState state,
-                  @JsonbProperty("aircraft") Aircraft aircraft,
-                  @JsonbProperty("departureInfo") DepartureArrivalInfo departureInfo,
-                  @JsonbProperty("arrivalInfo") DepartureArrivalInfo arrivalInfo,
-                  @JsonbProperty("price") float price)
+    public Flight( FlightState state,
+                  Aircraft aircraft,
+                  DepartureArrivalInfo departureInfo,
+                  DepartureArrivalInfo arrivalInfo,
+                   float price)
     {
         this(0,state,aircraft,departureInfo,arrivalInfo,price);
     }
@@ -62,15 +56,12 @@ public class Flight {
         this.flightNumber = flightNumber;
     }
 
-    @JsonbProperty(nillable = true)
     private int flightNumber;
 
-    @JsonbProperty(nillable = true)
     private FlightState state;
     private Aircraft aircraft;
-    //an array list of departures in consecutive order from the first to last
+
     private DepartureArrivalInfo departureInfo;
-    //an array list of arrival in consecutive order from the first to last
     private DepartureArrivalInfo arrivalInfo;
     private float price;
 }

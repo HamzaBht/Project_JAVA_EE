@@ -1,9 +1,7 @@
 package com.flight.api.flight_api;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Date;
 
 //Singleton class
 public class Airline {
@@ -28,10 +26,5 @@ public class Airline {
 
     public Collection<Flight> GetAllFlights(){
         return flights;
-    }
-
-    public void AddAircraft(Aircraft aircraft){
-        aircraft.setID(aircrafts.size());
-        aircrafts.add(aircraft);
     }
 }

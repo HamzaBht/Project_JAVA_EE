@@ -1,8 +1,5 @@
 package com.flight.api.flight_api;
 
-import javax.json.bind.annotation.JsonbCreator;
-import javax.json.bind.annotation.JsonbProperty;
-
 public class Airport {
     private String code;
     private City city;
@@ -15,8 +12,8 @@ public class Airport {
         return city;
     }
 
-    @JsonbCreator
-    public Airport(@JsonbProperty("code") String code, @JsonbProperty("city") City city) {
+
+    public Airport(String code,City city) {
         this.code = code;
         this.city = city;
     }
