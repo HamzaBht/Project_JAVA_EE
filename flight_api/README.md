@@ -39,8 +39,6 @@ a possible `JSON` reply can be like
 ]
 ```
 
-to add a new flight a user can send a `POST` request to the same URI with `JSON` content
-
 ## TODO
 
-- [] allow only authorized users to send POST requests, users should send a valide username and password
+- [ ] Load flights from database
