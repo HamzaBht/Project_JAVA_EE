@@ -18,20 +18,6 @@ public class Airline {
         aircrafts = new ArrayList<>();
         flights = new ArrayList<>();
         //TODO: Load flights and aircrafts from database
-
-        //For Debug
-        Aircraft aircraft = new Aircraft(600,600);
-        AddAircraft(aircraft);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date time = new Date();
-        Airport airport = new Airport("TNG", new City("Tanger"));
-        DepartureArrivalInfo departureInfo = new DepartureArrivalInfo("Monday",format.format(time), airport);
-        Flight flight = new Flight(FlightState.NO_TRACK_INFO,aircraft,departureInfo,departureInfo,1200);
-        try {
-            AddFlight(flight);
-        } catch (AircraftNotExistingException e) {
-            e.printStackTrace();
-        }
     }
 
     //Maps each model to the aircraft object
