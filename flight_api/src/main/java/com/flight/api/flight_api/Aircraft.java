@@ -1,36 +1,15 @@
 package com.flight.api.flight_api;
 
 
+import java.util.ArrayList;
+
 public class Aircraft {
-    public Aircraft(int totalCapacity, int availablePlaces) {
-        this.totalCapacity = totalCapacity;
-        this.availablePlaces = availablePlaces;
-    }
-    public void ResetAvailalePlaces(){
-        availablePlaces = totalCapacity;
-    }
-    public void BookPlaces(int places) throws NotEnoughPlacesLeftException {
-        if (places > availablePlaces){
-            throw new NotEnoughPlacesLeftException("There is no enough places left");
-        }
-        availablePlaces -= places;
-    }
+    private int ID;
+    private ArrayList<Cabine> cabines;
 
-
-    public int getTotalCapacity() {
-        return totalCapacity;
-    }
-
-    public void setTotalCapacity(int totalCapacity) {
-        this.totalCapacity = totalCapacity;
-    }
-
-    public int getAvailablePlaces() {
-        return availablePlaces;
-    }
-
-    public void setAvailablePlaces(int availablePlaces) {
-        this.availablePlaces = availablePlaces;
+    public Aircraft(int ID, ArrayList<Cabine> cabines) {
+        this.ID = ID;
+        this.cabines = cabines;
     }
 
     public int getID() {
@@ -41,7 +20,11 @@ public class Aircraft {
         this.ID = ID;
     }
 
-    private int totalCapacity;
-    private int availablePlaces;
-    private int ID;
+    public ArrayList<Cabine> getCabines() {
+        return cabines;
+    }
+
+    public void setCabines(ArrayList<Cabine> cabines) {
+        this.cabines = cabines;
+    }
 }

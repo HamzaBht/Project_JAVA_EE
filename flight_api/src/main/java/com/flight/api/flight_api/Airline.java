@@ -13,13 +13,9 @@ public class Airline {
         return ourAirline;
     }
     private Airline() {
-        aircrafts = new ArrayList<>();
         flights = new ArrayList<>();
-        //TODO: Load flights and aircrafts from database
+        //TODO: Load flights from database
     }
-
-    //Maps each model to the aircraft object
-    private ArrayList<Aircraft> aircrafts;
 
     //Map each flight number with corresponding flight
     private ArrayList<Flight> flights;
