@@ -280,9 +280,9 @@ body {
 
 /* Add an active class to highlight the current page */
 
-.topnav a.active {
+.active {
     color: white;
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
@@ -615,4 +615,209 @@ a:hover {
     line-height: 50px;
     margin-top: 34px;
     min-height: 658px;
+}
+
+
+/* Search page */
+
+.rectangle-20-C61RwL {
+    background-color: rgba(50, 37, 78, 1.0);
+    height: 140px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1920px;
+}
+
+.group-14-C61RwL {
+    background-color: transparent;
+    height: 98px;
+    left: 93px;
+    position: absolute;
+    top: 20px;
+    width: 404px;
+}
+
+.intersection-2-AX7pWk {
+    background-color: transparent;
+    bottom: 0px;
+    height: 82px;
+    position: absolute;
+    right: 0px;
+    width: 304px;
+}
+
+.group-1-AX7pWk {
+    background-color: transparent;
+    height: calc(100.00% - 14px);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 86px;
+}
+
+.subtraction-1-75u7LO {
+    background-color: transparent;
+    height: calc(100.00% - 11px);
+    left: 0px;
+    position: absolute;
+    top: 11px;
+    width: 100%;
+}
+
+.intersection-1-75u7LO {
+    background-color: transparent;
+    height: 43px;
+    left: 14px;
+    position: absolute;
+    top: 0px;
+    width: calc(100.00% - 27px);
+}
+
+.group-13-C61RwL {
+    background-color: transparent;
+    height: 48px;
+    left: 900px;
+    position: absolute;
+    top: 60px;
+    width: 1036px;
+}
+
+.home-about-us-flights-WQXeF1 a {
+    font-family: 'Montserrat', Helvetica, Arial, serif;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 60px;
+}
+
+.home-about-us-flights-WQXeF1 a:hover {
+    color: #a37ef3;
+    font-weight: 600;
+}
+
+.find-the-b-ight-price-C61RwL {
+    background-color: transparent;
+    color: rgba(79, 52, 138, 1.0);
+    font-family: 'Montserrat', Helvetica, Arial, serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    height: 88px;
+    left: 370px;
+    letter-spacing: 0.00px;
+    line-height: 50px;
+    position: absolute;
+    text-align: left;
+    top: 180px;
+    width: 965px;
+}
+
+#search-form {
+    position: absolute;
+    top: 300px;
+    left: 110px;
+    display: flex;
+}
+
+.input {
+    position: relative;
+}
+
+.input i {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #32254E;
+}
+
+#search-form input {
+    padding: 12px 40px;
+    border: 2px solid #32254E;
+    width: 270px;
+    height: 52px;
+    outline: none;
+    border-right: none;
+}
+
+#search-form select {
+    padding: 12px 20px;
+    border: 2px solid black;
+    width: 250px;
+    height: 52px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.selectdiv:after {
+    content: '<>';
+    font: 17px "Consolas", monospace;
+    color: #333;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    right: 11px;
+    /*Adjust for position however you want*/
+    top: 15px;
+    padding: 0 0 2px;
+    border-bottom: 1px solid #999;
+    /*left line */
+    position: absolute;
+    pointer-events: none;
+}
+
+#search-form #from {
+    border-radius: 25px 0px 0px 25px;
+}
+
+#search-form #depart,
+#return {
+    padding-right: 15px !important;
+    padding-left: 10px !important;
+}
+
+#search-form #class {
+    border: 2px solid black;
+    border-radius: 0px 25px 25px 0px;
+    padding-left: 12px !important;
+}
+
+.group-30-C61RwL {
+    background-color: #32254E;
+    color: white;
+    left: 1185px;
+    position: absolute;
+    top: 376px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.group-30-C61RwL a {
+    color: white;
+    font-size: 25px;
+}
+
+.group-30-C61RwL:hover {
+    background-color: #724ec0;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-block img {
+    overflow-x: hidden;
+    position: absolute;
+    top: 140px;
+    filter: blur(0px);
+}
+
+.footer .group-27-C61RwL {
+    background-color: rgba(50, 37, 78, 1.0);
+    left: 0px;
+    width: 1920px;
+    position: absolute;
+    top: 638px;
 }
