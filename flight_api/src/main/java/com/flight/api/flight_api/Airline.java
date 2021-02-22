@@ -40,21 +40,6 @@ public class Airline {
     //Map each flight number with corresponding flight
     private ArrayList<Flight> flights;
 
-    public void AddFlight(Flight flight) throws AircraftNotExistingException {
-        int aircraftID = flight.getAircraft().getID();
-        if (aircraftID >= aircrafts.size()){
-            throw new AircraftNotExistingException("Model :"+aircraftID+" not existing");
-        }
-        else {
-            flight.setFlightNumber(flights.size());
-            if (flight.getState() == null){
-                flight.setState(FlightState.NO_TRACK_INFO);
-            }
-            flights.add(flight);
-            //TODO: add flight to database
-        }
-    }
-
     public Collection<Flight> GetAllFlights(){
         return flights;
     }
