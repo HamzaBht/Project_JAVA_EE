@@ -1,14 +1,30 @@
 @startuml Vols
-class Vol{
-    -int ID
-    -date dateDepart
-    -date dateArrivee
-    -time heureDepart
-    -time heureArrivee
-    -double price
-    +ouvrirReservation()
-    +fermerReservation()
-    +calculerDuree()
+class Flight{
+    - flightnumber : int 
+    - state : FlightState
+    - aircraft : Aircraft
+    - departureInfo : DepartureArrivalInfo
+    - arrivalInfo : DepartureArrivalInfo
+    - price : float
+}
+class DepartureArrivalInfo{
+    - day : string
+    - time : Date
+    - airport : Airpot
+}
+enum FlightState{
+    Scheduled
+    Delayed
+    Departed
+    InAir
+    Expected
+    Diverted
+    Recovery
+    Landed
+    Arrived
+    Cancelled
+    NoTrackInfo
+    PastFlight
 }
 class Reservation{
     -int ID
@@ -21,32 +37,43 @@ class Client{
     -String prenom
     -String numeroPassport
 }
-class Aeroport{
-    -int ID
-    -String nom
+class Airport{
+    - id : int
+    - code : string
+    - city : City
 }
-class Ville{
+class City{
     -String nom
+    -Pays pay
 }
 class Cabine{
-    -int ID
-    -String typeCabine
-    -int Capacite
+    - cabineClass : CabineClasses
+    - capacity : int
+    - availablePlaces : int
+}
+enum CabineClasses{
+    Economy
+    PremiumEconomy
+    BusinessClass
+    FirstClass
+}
+class Aircraft{
+    cabines : ArrayList<Cabine>
 }
 class Pays{
     -int ID
     -String nom
 }
 
-Reservation "0..*" --  "1" Vol :concerne 
-Reservation "0..*" --  "1" Client :effectue 
-Vol "1..*" -- "1" Cabine :contient
-Aeroport "0..*" -- "1..*" Ville :represente
-Aeroport "1" -- "0..*" Vol : Depart
-Aeroport "1" -- "0..*" Vol : Arrivee
-Ville "1..*" -- "1" Pays :se trouve
-
-
-
-
+Flight "1" -- "0..*" Reservation :concerne 
+Client "1" -- "0..*" Reservation :effectue 
+Flight "1..*" -- "1" Aircraft :concern
+City "1..*" -- "0..*" Airport :represente
+City "1..*" -- "1" Pays :se trouve
+Flight --* DepartureArrivalInfo
+Flight --* FlightState
+DepartureArrivalInfo -- Airport : Depart""
+Airport -- DepartureArrivalInfo : "Arrivee"
+Aircraft -- Cabine : "have"
+Cabine -- CabineClasses : "is"
 @enduml
