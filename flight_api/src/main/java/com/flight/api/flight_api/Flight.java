@@ -1,18 +1,16 @@
 package com.flight.api.flight_api;
 
 public class Flight {
-    public Flight( FlightState state,
-                  Aircraft aircraft,
+    public Flight(Aircraft aircraft,
                   DepartureArrivalInfo departureInfo,
                   DepartureArrivalInfo arrivalInfo,
                    float price)
     {
-        this(0,state,aircraft,departureInfo,arrivalInfo,price);
+        this(0,aircraft,departureInfo,arrivalInfo,price);
     }
 
-    public Flight(int flightNumber, FlightState state, Aircraft aircraft, DepartureArrivalInfo departureInfo, DepartureArrivalInfo arrivalInfo, float price) {
+    public Flight(int flightNumber, Aircraft aircraft, DepartureArrivalInfo departureInfo, DepartureArrivalInfo arrivalInfo, float price) {
         this.flightNumber = flightNumber;
-        this.state = state;
         this.aircraft = aircraft;
         this.departureInfo = departureInfo;
         this.arrivalInfo = arrivalInfo;
@@ -21,9 +19,6 @@ public class Flight {
 
     public int getFlightNumber() {
         return flightNumber;
-    }
-    public FlightState getState() {
-        return state;
     }
     public Aircraft getAircraft() {
         return aircraft;
@@ -36,9 +31,6 @@ public class Flight {
     }
     public float getPrice() {
         return price;
-    }
-    public void setState(FlightState state) {
-        this.state = state;
     }
     public void setDepartureInfo(DepartureArrivalInfo departureInfo) {
         this.departureInfo = departureInfo;
@@ -58,7 +50,6 @@ public class Flight {
 
     private int flightNumber;
 
-    private FlightState state;
     private Aircraft aircraft;
 
     private DepartureArrivalInfo departureInfo;
