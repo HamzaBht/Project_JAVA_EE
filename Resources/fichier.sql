@@ -251,17 +251,21 @@ CREATE TABLE `vol` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+
+--
 -- Dumping data for table `vol`
 --
 
 INSERT INTO `vol` (`idVol`, `dateDepart`, `dateArrivee`, `heureDepart`, `heureArrivee`, `price`, `Aeroport_idAeroportDepart`, `Aeroport_idAeroportArrivee`, `Cabine_idCabine`) VALUES
 (1, '2021-02-28', '2021-02-28', '09:00:00', '11:45:00', '1628.0000', 6, 14, 4),
 (2, '2021-03-02', '2021-03-02', '17:00:00', '20:20:00', '2930.0000', 1, 36, 3),
-(3, '2021-03-02', '2021-03-02', '06:10:00', '07:25:00', '2971.0000', 2, 28, 1);
+(3, '2021-03-02', '2021-03-02', '06:10:00', '07:25:00', '2971.0000', 2, 28, 1),
+(4, '2021-03-02', '2021-02-02', '15:00:00', '17:12:00', '2736.0000', 6, 14, 2),
+(5, '2021-03-17', '2021-03-17', '14:00:00', '16:36:00', '1543.0000', 4, 17, 3);
+
 --
 -- Indexes for dumped tables
 --
-
 --
 -- Indexes for table `aeroport`
 --
