@@ -1,5 +1,9 @@
 package com.flight.api.flight_api;
 
+import com.flight.api.DAO.DAOException;
+import com.flight.api.DAOImplementations.DAOFactory;
+import com.mysql.cj.x.protobuf.MysqlxCrud;
+
 public class Flight {
 
     public Flight(int flightNumber, Cabine cabine, DepartureArrivalInfo departureInfo, DepartureArrivalInfo arrivalInfo, Double price) {
@@ -62,4 +66,31 @@ public class Flight {
     private DepartureArrivalInfo arrivalInfo;
     private Double price;
     private boolean available = false;
+
+    public boolean OpenReservation(){
+        if (!available){
+            available = true;
+            try {
+                DAOFactory.getInstance().getFlightDAO().Update(this);
+            }
+            catch (DAOException e){
+                available = false;
+                return false;
+            }
+        }
+        return true;
+    }
+    public boolean CloseReservation(){
+        if (available){
+            available = false;
+            try{
+                DAOFactory.getInstance().getFlightDAO().Update(this);
+            }
+            catch (DAOException e){
+                available = true;
+                return false;
+            }
+        }
+        return true;
+    }
 }
