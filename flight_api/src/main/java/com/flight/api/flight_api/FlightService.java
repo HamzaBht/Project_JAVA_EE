@@ -1,5 +1,7 @@
 package com.flight.api.flight_api;
 
+import com.flight.api.DAOImplementations.*;
+
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 import javax.ws.rs.*;
@@ -9,13 +11,15 @@ import java.util.Collection;
 
 @Path("/flights")
 public class FlightService {
-    private Airline airlineDataService = Airline.getInstance();
+    private DAOFactory airlineDataService = DAOFactory.getInstance();
+
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response GetFlights(){
         Response response;
 
-        Collection<Flight> flights = airlineDataService.GetAllFlights();
+        Collection<Flight> flights = airlineDataService.getFlightDAO().findAll();
         Jsonb jsonb = JsonbBuilder.create();
 
         response = Response.ok(jsonb.toJson(flights)).build();

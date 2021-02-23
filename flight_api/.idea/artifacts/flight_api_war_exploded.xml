@@ -49,6 +49,8 @@
           <element id="library" level="project" name="Maven: org.glassfish.jersey.core:jersey-client:2.32" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2.external:jakarta.inject:2.6.1" />
           <element id="library" level="project" name="Maven: org.jetbrains:annotations:20.1.0" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.22" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">

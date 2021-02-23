@@ -1,17 +1,10 @@
 package com.flight.api.flight_api;
 
 public class Flight {
-    public Flight(Aircraft aircraft,
-                  DepartureArrivalInfo departureInfo,
-                  DepartureArrivalInfo arrivalInfo,
-                   float price)
-    {
-        this(0,aircraft,departureInfo,arrivalInfo,price);
-    }
 
-    public Flight(int flightNumber, Aircraft aircraft, DepartureArrivalInfo departureInfo, DepartureArrivalInfo arrivalInfo, float price) {
+    public Flight(int flightNumber, Cabine cabine, DepartureArrivalInfo departureInfo, DepartureArrivalInfo arrivalInfo, Double price) {
         this.flightNumber = flightNumber;
-        this.aircraft = aircraft;
+        this.cabine = cabine;
         this.departureInfo = departureInfo;
         this.arrivalInfo = arrivalInfo;
         this.price = price;
@@ -20,16 +13,13 @@ public class Flight {
     public int getFlightNumber() {
         return flightNumber;
     }
-    public Aircraft getAircraft() {
-        return aircraft;
-    }
     public DepartureArrivalInfo getDepartureInfo() {
         return departureInfo;
     }
     public DepartureArrivalInfo getArrivalInfo() {
         return arrivalInfo;
     }
-    public float getPrice() {
+    public Double getPrice() {
         return price;
     }
     public void setDepartureInfo(DepartureArrivalInfo departureInfo) {
@@ -38,10 +28,26 @@ public class Flight {
     public void setArrivalInfo(DepartureArrivalInfo arrivalInfo) {
         this.arrivalInfo = arrivalInfo;
     }
-    public void setPrice(float price) {
+    public void setPrice(Double price) {
         if (price >= 0.0f) {
             this.price = price;
         }
+    }
+
+    public Cabine getCabine() {
+        return cabine;
+    }
+
+    public void setCabine(Cabine cabine) {
+        this.cabine = cabine;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 
     public void setFlightNumber(int flightNumber) {
@@ -50,9 +56,10 @@ public class Flight {
 
     private int flightNumber;
 
-    private Aircraft aircraft;
+    private Cabine cabine;
 
     private DepartureArrivalInfo departureInfo;
     private DepartureArrivalInfo arrivalInfo;
-    private float price;
+    private Double price;
+    private boolean available = false;
 }

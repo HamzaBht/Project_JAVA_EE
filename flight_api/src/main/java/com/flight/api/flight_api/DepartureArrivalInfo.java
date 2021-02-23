@@ -1,50 +1,49 @@
 package com.flight.api.flight_api;
 
 
+import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DepartureArrivalInfo {
-    public DepartureArrivalInfo(String day,
-                                String time,
-                                Airport airport) {
-        this.day = day;
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            this.time = format.parse(time);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+    public DepartureArrivalInfo(Date date, Time hour, Airport airport) {
+        this.date = date;
+        this.hour = hour;
         this.airport = airport;
     }
 
-    public String getDay() {
-        return day;
-    }
 
-    public Date getTime() {
-        return time;
+    public Date getDate() {
+        return date;
     }
 
     public Airport getAirport() {
         return airport;
     }
 
-    public void setDay(String day) {
-        this.day = day;
-    }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public void setAirport(Airport airport) {
         this.airport = airport;
     }
 
-    private String day;
-    private Date time;
+    public Time getHour() {
+        return hour;
+    }
+
+    public void setHour(Time hour) {
+        this.hour = hour;
+    }
+
+    private Date date;
+
+
+    private Time hour;
     private Airport airport;
 
 }

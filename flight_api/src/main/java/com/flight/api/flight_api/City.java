@@ -6,9 +6,30 @@ public class City {
         return name;
     }
 
-    public City(String name) {
+
+
+    private String name;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
-    private String name;
+    public Pays getPays() {
+        return pays;
+    }
+
+    public void setPays(Pays pays) {
+        this.pays = pays;
+    }
+
+    private int ID;
+    private Pays pays;
 }

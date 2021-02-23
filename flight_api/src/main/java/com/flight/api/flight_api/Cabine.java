@@ -1,6 +1,15 @@
 package com.flight.api.flight_api;
 
 public class Cabine {
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    private int ID;
     private CabineClasses type;
     private int capacity;
     private int availablePlaces;
