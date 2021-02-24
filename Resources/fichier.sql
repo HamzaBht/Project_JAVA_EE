@@ -1,9 +1,7 @@
 -- phpMyAdmin SQL Dump
 -- version 4.8.5
 -- https://www.phpmyadmin.net/
---
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 23 fév. 2021 à 01:05
 -- Version du serveur :  8.0.22
 -- Version de PHP :  7.0.33
 
@@ -135,9 +133,9 @@ CREATE TABLE IF NOT EXISTS `client` (
 INSERT INTO `client` (`idClient`, `nom`, `numeroPassport`) VALUES
 (1, 'Hamza', '22'),
 (2, 'Hafsa', '22'),
-(3, 'Hafsa', '22'),
-(4, 'Ha', '22'),
-(5, 'Haa', '22'),
+(3, 'amine', '22'),
+(4, 'mouad', '22'),
+(5, 'jalil', '22'),
 (6, 'Haf', '22');
 
 -- --------------------------------------------------------
