@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head><title>HTTP Status 500 – Internal Server Error</title>
+    <style type="text/css">body {
+        font-family: Tahoma, Arial, sans-serif;
+    }
+
+    h1, h2, h3, b {
+        color: white;
+        background-color: #525D76;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    a {
+        color: black;
+    }
+
+    .line {
+        height: 1px;
+        background-color: #525D76;
+        border: none;
+    }</style>
+</head>
+<body><h1>HTTP Status 500 – Internal Server Error</h1>
+<hr class="line"/>
+<p><b>Type</b> Exception Report</p>
+<p><b>Message</b> A MultiException has 1 exceptions. They are:</p>
+<p><b>Description</b> The server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+<p><b>Exception</b></p>
+<pre>javax.servlet.ServletException: A MultiException has 1 exceptions.  They are:
+1. java.lang.NoSuchMethodException: Could not find a suitable constructor in com.flight.api.flight_api.FlightService class.
+
+	org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:410)
+	org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:366)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:319)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+</pre>
+<p><b>Root Cause</b></p>
+<pre>A MultiException has 1 exceptions.  They are:
+1. java.lang.NoSuchMethodException: Could not find a suitable constructor in com.flight.api.flight_api.FlightService class.
+
+	org.jvnet.hk2.internal.Collector.throwIfErrors(Collector.java:65)
+	org.jvnet.hk2.internal.Utilities.justCreate(Utilities.java:1044)
+	org.jvnet.hk2.internal.ServiceLocatorImpl.create(ServiceLocatorImpl.java:968)
+	org.jvnet.hk2.internal.ServiceLocatorImpl.createAndInitialize(ServiceLocatorImpl.java:1072)
+	org.jvnet.hk2.internal.ServiceLocatorImpl.createAndInitialize(ServiceLocatorImpl.java:1064)
+	org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.createAndInitialize(AbstractHk2InjectionManager.java:189)
+	org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.createAndInitialize(ImmediateHk2InjectionManager.java:30)
+	org.glassfish.jersey.internal.inject.Injections.getOrCreate(Injections.java:106)
+	org.glassfish.jersey.server.model.MethodHandler$ClassBasedMethodHandler.getInstance(MethodHandler.java:260)
+	org.glassfish.jersey.server.internal.routing.PushMethodHandlerRouter.apply(PushMethodHandlerRouter.java:51)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:86)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:69)
+	org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:38)
+	org.glassfish.jersey.process.internal.Stages.process(Stages.java:173)
+	org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:245)
+	org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+	org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:366)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:319)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+</pre>
+<p><b>Root Cause</b></p>
+<pre>java.lang.NoSuchMethodException: Could not find a suitable constructor in com.flight.api.flight_api.FlightService class.
+	org.glassfish.jersey.inject.hk2.JerseyClassAnalyzer.getConstructor(JerseyClassAnalyzer.java:168)
+	org.jvnet.hk2.internal.Utilities.getConstructor(Utilities.java:156)
+	org.jvnet.hk2.internal.Utilities.justCreate(Utilities.java:1042)
+	org.jvnet.hk2.internal.ServiceLocatorImpl.create(ServiceLocatorImpl.java:968)
+	org.jvnet.hk2.internal.ServiceLocatorImpl.createAndInitialize(ServiceLocatorImpl.java:1072)
+	org.jvnet.hk2.internal.ServiceLocatorImpl.createAndInitialize(ServiceLocatorImpl.java:1064)
+	org.glassfish.jersey.inject.hk2.AbstractHk2InjectionManager.createAndInitialize(AbstractHk2InjectionManager.java:189)
+	org.glassfish.jersey.inject.hk2.ImmediateHk2InjectionManager.createAndInitialize(ImmediateHk2InjectionManager.java:30)
+	org.glassfish.jersey.internal.inject.Injections.getOrCreate(Injections.java:106)
+	org.glassfish.jersey.server.model.MethodHandler$ClassBasedMethodHandler.getInstance(MethodHandler.java:260)
+	org.glassfish.jersey.server.internal.routing.PushMethodHandlerRouter.apply(PushMethodHandlerRouter.java:51)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:86)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	org.glassfish.jersey.server.internal.routing.RoutingStage._apply(RoutingStage.java:89)
+	org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:69)
+	org.glassfish.jersey.server.internal.routing.RoutingStage.apply(RoutingStage.java:38)
+	org.glassfish.jersey.process.internal.Stages.process(Stages.java:173)
+	org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:245)
+	org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+	org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+	org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+	org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+	org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+	org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:265)
+	org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:232)
+	org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:680)
+	org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:394)
+	org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:346)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:366)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:319)
+	org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+	org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+</pre>
+<p><b>Note</b> The full stack trace of the root cause is available in the server logs.</p>
+<hr class="line"/>
+<h3>Apache Tomcat/9.0.43</h3></body>
+</html>
