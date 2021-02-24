@@ -1,10 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Hôte : 127.0.0.1:3306
+-- Généré le :  mar. 23 fév. 2021 à 01:05
+-- Version du serveur :  8.0.22
+-- Version de PHP :  7.0.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -18,23 +19,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mydb`
+-- Base de données :  `flightscomp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aeroport`
+-- Structure de la table `aeroport`
 --
 
-CREATE TABLE `aeroport` (
-  `idAeroport` int(11) NOT NULL,
+DROP TABLE IF EXISTS `aeroport`;
+CREATE TABLE IF NOT EXISTS `aeroport` (
+  `idAeroport` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(45) DEFAULT NULL,
-  `Ville_idVille` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Ville_idVille` int NOT NULL,
+  PRIMARY KEY (`idAeroport`),
+  KEY `fk_Aeroport_Ville1_idx` (`Ville_idVille`)
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `aeroport`
+-- Déchargement des données de la table `aeroport`
 --
 
 INSERT INTO `aeroport` (`idAeroport`, `nom`, `Ville_idVille`) VALUES
@@ -82,55 +86,75 @@ INSERT INTO `aeroport` (`idAeroport`, `nom`, `Ville_idVille`) VALUES
 (42, ' Aéroport de Kaunas ', 42),
 (43, ' Aéroport de Luxembourg', 43),
 (44, 'Aéroport d\'Amsterdam Schiphol', 44),
-(45, 'Aéroport de Tirana', 45);
+(45, 'Aéroport de Tirana', 45),
+(46, 'solalo', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cabine`
+-- Structure de la table `cabine`
 --
 
-CREATE TABLE `cabine` (
+DROP TABLE IF EXISTS `cabine`;
+CREATE TABLE IF NOT EXISTS `cabine` (
   `typeCabine` varchar(45) NOT NULL,
-  `Capacite` int(11) DEFAULT NULL,
-  `idCabine` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Capacite` int DEFAULT NULL,
+  `idCabine` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idCabine`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `cabine`
+-- Déchargement des données de la table `cabine`
 --
 
 INSERT INTO `cabine` (`typeCabine`, `Capacite`, `idCabine`) VALUES
 ('Première', 9, 1),
 ('Affaire', 80, 2),
 ('Éco-premium', 88, 3),
-('Économie', 343, 4);
+('Économie', 343, 4),
+('LOLA', 20, 5);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `client`
+-- Structure de la table `client`
 --
 
-CREATE TABLE `client` (
-  `idClient` int(11) NOT NULL,
+DROP TABLE IF EXISTS `client`;
+CREATE TABLE IF NOT EXISTS `client` (
+  `idClient` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(45) DEFAULT NULL,
-  `numeroPassport` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `numeroPassport` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idClient`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `client`
+--
+
+INSERT INTO `client` (`idClient`, `nom`, `numeroPassport`) VALUES
+(1, 'Hamza', '22'),
+(2, 'Hafsa', '22'),
+(3, 'Hafsa', '22'),
+(4, 'Ha', '22'),
+(5, 'Haa', '22'),
+(6, 'Haf', '22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pays`
+-- Structure de la table `pays`
 --
 
-CREATE TABLE `pays` (
+DROP TABLE IF EXISTS `pays`;
+CREATE TABLE IF NOT EXISTS `pays` (
   `nom` varchar(45) DEFAULT NULL,
-  `idpays` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `idpays` int NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idpays`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pays`
+-- Déchargement des données de la table `pays`
 --
 
 INSERT INTO `pays` (`nom`, `idpays`) VALUES
@@ -158,31 +182,49 @@ INSERT INTO `pays` (`nom`, `idpays`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservation`
+-- Structure de la table `reservation`
 --
 
-CREATE TABLE `reservation` (
-  `idReservation` int(11) NOT NULL,
+DROP TABLE IF EXISTS `reservation`;
+CREATE TABLE IF NOT EXISTS `reservation` (
+  `idReservation` int NOT NULL AUTO_INCREMENT,
   `dateReservation` varchar(45) DEFAULT NULL,
   `heureReservation` varchar(45) DEFAULT NULL,
-  `Vol_idVol` int(11) NOT NULL,
-  `Client_idClient` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Vol_idVol` int NOT NULL,
+  `Client_idClient` int NOT NULL,
+  PRIMARY KEY (`idReservation`),
+  KEY `fk_Reservation_Vol1_idx` (`Vol_idVol`),
+  KEY `fk_Reservation_Client1_idx` (`Client_idClient`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `reservation`
+--
+
+INSERT INTO `reservation` (`idReservation`, `dateReservation`, `heureReservation`, `Vol_idVol`, `Client_idClient`) VALUES
+(1, '2021-02-28', '09:00:00', 1, 1),
+(2, '2021-02-28', '09:00:00', 2, 1),
+(3, '2021-02-28', '09:00:00', 2, 2),
+(4, '2021-02-28', '09:00:00', 2, 3),
+(5, '2021-02-28', '09:00:00', 2, 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ville`
+-- Structure de la table `ville`
 --
 
-CREATE TABLE `ville` (
+DROP TABLE IF EXISTS `ville`;
+CREATE TABLE IF NOT EXISTS `ville` (
   `nom` varchar(45) DEFAULT NULL,
-  `idVille` int(11) NOT NULL,
-  `Pays_idpays` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `idVille` int NOT NULL AUTO_INCREMENT,
+  `Pays_idpays` int NOT NULL,
+  PRIMARY KEY (`idVille`),
+  KEY `fk_Ville_Pays1_idx` (`Pays_idpays`)
+) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ville`
+-- Déchargement des données de la table `ville`
 --
 
 INSERT INTO `ville` (`nom`, `idVille`, `Pays_idpays`) VALUES
@@ -230,121 +272,88 @@ INSERT INTO `ville` (`nom`, `idVille`, `Pays_idpays`) VALUES
 ('Kaunas', 42, 17),
 ('Sandweiler', 43, 18),
 ('Amsterdam', 44, 19),
-('Tirana', 45, 20);
+('Tirana', 45, 20),
+('hoceima', 70, 1),
+('hoceima', 71, 1),
+('hoceima', 72, 1),
+('hoceima', 73, 1),
+('hoceima', 74, 1),
+('hoceima', 75, 1),
+('hoceima', 76, 1),
+('hoceima', 77, 1),
+('hoceima', 78, 1),
+('hoceima', 79, 1),
+('hoceima', 80, 1),
+('Nador', 81, 1),
+('Nador', 82, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vol`
+-- Structure de la table `vol`
 --
 
-CREATE TABLE `vol` (
-  `idVol` int(11) NOT NULL,
+DROP TABLE IF EXISTS `vol`;
+CREATE TABLE IF NOT EXISTS `vol` (
+  `idVol` int NOT NULL AUTO_INCREMENT,
   `dateDepart` date NOT NULL,
   `dateArrivee` date NOT NULL,
   `heureDepart` time NOT NULL,
   `heureArrivee` time NOT NULL,
   `price` decimal(12,4) NOT NULL,
-  `Aeroport_idAeroportDepart` int(11) NOT NULL,
-  `Aeroport_idAeroportArrivee` int(11) NOT NULL,
-  `Cabine_idCabine` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Aeroport_idAeroportDepart` int NOT NULL,
+  `Aeroport_idAeroportArrivee` int NOT NULL,
+  `Cabine_idCabine` int NOT NULL,
+  `isreservationavailable` int DEFAULT NULL,
+  PRIMARY KEY (`idVol`),
+  KEY `fk_Vol_Aeroport_idx` (`Aeroport_idAeroportDepart`),
+  KEY `fk_Vol_Aeroport1_idx` (`Aeroport_idAeroportArrivee`),
+  KEY `fk_Vol_Cabine1_idx` (`Cabine_idCabine`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `vol`
+-- Déchargement des données de la table `vol`
 --
 
-INSERT INTO `vol` (`idVol`, `dateDepart`, `dateArrivee`, `heureDepart`, `heureArrivee`, `price`, `Aeroport_idAeroportDepart`, `Aeroport_idAeroportArrivee`, `Cabine_idCabine`) VALUES
-(1, '2021-02-28', '2021-02-28', '09:00:00', '11:45:00', '1628.0000', 6, 14, 4),
-(2, '2021-03-02', '2021-03-02', '17:00:00', '20:20:00', '2930.0000', 1, 36, 3),
-(3, '2021-03-02', '2021-03-02', '06:10:00', '07:25:00', '2971.0000', 2, 28, 1);
+INSERT INTO `vol` (`idVol`, `dateDepart`, `dateArrivee`, `heureDepart`, `heureArrivee`, `price`, `Aeroport_idAeroportDepart`, `Aeroport_idAeroportArrivee`, `Cabine_idCabine`, `isreservationavailable`) VALUES
+(1, '2021-02-28', '2021-02-28', '09:00:00', '11:45:00', '1628.0000', 6, 14, 4, 0),
+(2, '2021-03-02', '2021-03-02', '17:00:00', '20:20:00', '2930.0000', 1, 36, 3, 0),
+(3, '2021-03-02', '2021-03-02', '06:10:00', '07:25:00', '2971.0000', 2, 28, 1, 0),
+(4, '2021-03-02', '2021-02-02', '15:00:00', '17:12:00', '2736.0000', 6, 14, 2, 0),
+(5, '2021-03-17', '2021-03-17', '14:00:00', '16:36:00', '1543.0000', 4, 17, 3, 0);
+
 --
--- Indexes for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Indexes for table `aeroport`
+-- Contraintes pour la table `aeroport`
 --
 ALTER TABLE `aeroport`
-  ADD PRIMARY KEY (`idAeroport`),
-  ADD KEY `fk_Aeroport_Ville1_idx` (`Ville_idVille`);
+  ADD CONSTRAINT `fk_Aeroport_Ville1` FOREIGN KEY (`Ville_idVille`) REFERENCES `ville` (`idVille`);
 
 --
--- Indexes for table `cabine`
---
-ALTER TABLE `cabine`
-  ADD PRIMARY KEY (`idCabine`);
-
---
--- Indexes for table `client`
---
-ALTER TABLE `client`
-  ADD PRIMARY KEY (`idClient`);
-
---
--- Indexes for table `pays`
---
-ALTER TABLE `pays`
-  ADD PRIMARY KEY (`idpays`);
-
---
--- Indexes for table `reservation`
+-- Contraintes pour la table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD PRIMARY KEY (`idReservation`),
-  ADD KEY `fk_Reservation_Vol1_idx` (`Vol_idVol`),
-  ADD KEY `fk_Reservation_Client1_idx` (`Client_idClient`);
+  ADD CONSTRAINT `fk_Reservation_Client1` FOREIGN KEY (`Client_idClient`) REFERENCES `client` (`idClient`),
+  ADD CONSTRAINT `fk_Reservation_Vol1` FOREIGN KEY (`Vol_idVol`) REFERENCES `vol` (`idVol`);
 
 --
--- Indexes for table `ville`
+-- Contraintes pour la table `ville`
 --
 ALTER TABLE `ville`
-  ADD PRIMARY KEY (`idVille`),
-  ADD KEY `fk_Ville_Pays1_idx` (`Pays_idpays`);
+  ADD CONSTRAINT `fk_Ville_Pays1` FOREIGN KEY (`Pays_idpays`) REFERENCES `pays` (`idpays`);
 
 --
--- Indexes for table `vol`
+-- Contraintes pour la table `vol`
 --
 ALTER TABLE `vol`
-  ADD PRIMARY KEY (`idVol`),
-  ADD KEY `fk_Vol_Aeroport_idx` (`Aeroport_idAeroportDepart`),
-  ADD KEY `fk_Vol_Aeroport1_idx` (`Aeroport_idAeroportArrivee`),
-  ADD KEY `fk_Vol_Cabine1_idx` (`Cabine_idCabine`);
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `aeroport`
---
-ALTER TABLE `aeroport`
-  ADD CONSTRAINT `fk_Aeroport_Ville1` FOREIGN KEY (`Ville_idVille`) REFERENCES `ville` (`idVille`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `reservation`
---
-ALTER TABLE `reservation`
-  ADD CONSTRAINT `fk_Reservation_Client1` FOREIGN KEY (`Client_idClient`) REFERENCES `client` (`idClient`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Reservation_Vol1` FOREIGN KEY (`Vol_idVol`) REFERENCES `vol` (`idVol`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `ville`
---
-ALTER TABLE `ville`
-  ADD CONSTRAINT `fk_Ville_Pays1` FOREIGN KEY (`Pays_idpays`) REFERENCES `pays` (`idpays`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints for table `vol`
---
-ALTER TABLE `vol`
-  ADD CONSTRAINT `fk_Vol_Aeroport` FOREIGN KEY (`Aeroport_idAeroportDepart`) REFERENCES `aeroport` (`idAeroport`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Vol_Aeroport1` FOREIGN KEY (`Aeroport_idAeroportArrivee`) REFERENCES `aeroport` (`idAeroport`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Vol_Cabine1` FOREIGN KEY (`Cabine_idCabine`) REFERENCES `cabine` (`idCabine`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Vol_Aeroport` FOREIGN KEY (`Aeroport_idAeroportDepart`) REFERENCES `aeroport` (`idAeroport`),
+  ADD CONSTRAINT `fk_Vol_Aeroport1` FOREIGN KEY (`Aeroport_idAeroportArrivee`) REFERENCES `aeroport` (`idAeroport`),
+  ADD CONSTRAINT `fk_Vol_Cabine1` FOREIGN KEY (`Cabine_idCabine`) REFERENCES `cabine` (`idCabine`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
