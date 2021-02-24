@@ -1,0 +1,217 @@
+[
+  {
+    "flightNumber": 1,
+    "cabine": {
+      "type": "Économie",
+      "capacity": 343,
+      "availablePlaces": 0,
+      "id": 4
+    },
+    "departureInfo": {
+      "date": 1614470400000,
+      "hour": "09:00:00",
+      "airport": {
+        "name": " Aéroport Rabat-Salé",
+        "city": {
+          "name": "Salé",
+          "pays": {
+            "name": "Maroc",
+            "id": 1
+          },
+          "id": 6
+        },
+        "id": 0
+      }
+    },
+    "arrivalInfo": {
+      "date": 1614470400000,
+      "hour": "11:45:00",
+      "airport": {
+        "name": " Paris-Charles de Gaulle",
+        "city": {
+          "name": "Paris",
+          "pays": {
+            "name": "France",
+            "id": 2
+          },
+          "id": 14
+        },
+        "id": 0
+      }
+    },
+    "price": 1628.0,
+    "available": false
+  },
+  {
+    "flightNumber": 2,
+    "cabine": {
+      "type": "Éco-premium",
+      "capacity": 88,
+      "availablePlaces": 0,
+      "id": 3
+    },
+    "departureInfo": {
+      "date": 1614643200000,
+      "hour": "17:00:00",
+      "airport": {
+        "name": "Aéroport de Casablanca Mohammed V",
+        "city": {
+          "name": "Casablanca",
+          "pays": {
+            "name": "Maroc",
+            "id": 1
+          },
+          "id": 1
+        },
+        "id": 0
+      }
+    },
+    "arrivalInfo": {
+      "date": 1614643200000,
+      "hour": "20:20:00",
+      "airport": {
+        "name": "Aéroport de Bruxelles",
+        "city": {
+          "name": "Bruxelles",
+          "pays": {
+            "name": "Belgique",
+            "id": 10
+          },
+          "id": 36
+        },
+        "id": 0
+      }
+    },
+    "price": 2930.0,
+    "available": false
+  },
+  {
+    "flightNumber": 3,
+    "cabine": {
+      "type": "Première",
+      "capacity": 9,
+      "availablePlaces": 0,
+      "id": 1
+    },
+    "departureInfo": {
+      "date": 1614643200000,
+      "hour": "06:10:00",
+      "airport": {
+        "name": "Aéroport de Marrakech-Ménara",
+        "city": {
+          "name": "Marrakech",
+          "pays": {
+            "name": "Maroc",
+            "id": 1
+          },
+          "id": 2
+        },
+        "id": 0
+      }
+    },
+    "arrivalInfo": {
+      "date": 1614643200000,
+      "hour": "07:25:00",
+      "airport": {
+        "name": "Aéroport Léonard-de-Vinci de Rome Fiumicino",
+        "city": {
+          "name": "Rome",
+          "pays": {
+            "name": "Italie",
+            "id": 4
+          },
+          "id": 28
+        },
+        "id": 0
+      }
+    },
+    "price": 2971.0,
+    "available": false
+  },
+  {
+    "flightNumber": 4,
+    "cabine": {
+      "type": "Affaire",
+      "capacity": 80,
+      "availablePlaces": 0,
+      "id": 2
+    },
+    "departureInfo": {
+      "date": 1614643200000,
+      "hour": "15:00:00",
+      "airport": {
+        "name": " Aéroport Rabat-Salé",
+        "city": {
+          "name": "Salé",
+          "pays": {
+            "name": "Maroc",
+            "id": 1
+          },
+          "id": 6
+        },
+        "id": 0
+      }
+    },
+    "arrivalInfo": {
+      "date": 1612224000000,
+      "hour": "17:12:00",
+      "airport": {
+        "name": " Paris-Charles de Gaulle",
+        "city": {
+          "name": "Paris",
+          "pays": {
+            "name": "France",
+            "id": 2
+          },
+          "id": 14
+        },
+        "id": 0
+      }
+    },
+    "price": 2736.0,
+    "available": false
+  },
+  {
+    "flightNumber": 5,
+    "cabine": {
+      "type": "Éco-premium",
+      "capacity": 88,
+      "availablePlaces": 0,
+      "id": 3
+    },
+    "departureInfo": {
+      "date": 1615939200000,
+      "hour": "14:00:00",
+      "airport": {
+        "name": "Aéroport Fès Saïss",
+        "city": {
+          "name": "Fès",
+          "pays": {
+            "name": "Maroc",
+            "id": 1
+          },
+          "id": 4
+        },
+        "id": 0
+      }
+    },
+    "arrivalInfo": {
+      "date": 1615939200000,
+      "hour": "16:36:00",
+      "airport": {
+        "name": "Aéroport de Lyon-Saint Exupéry",
+        "city": {
+          "name": "Lyon",
+          "pays": {
+            "name": "France",
+            "id": 2
+          },
+          "id": 17
+        },
+        "id": 0
+      }
+    },
+    "price": 1543.0,
+    "available": false
+  }
+]
