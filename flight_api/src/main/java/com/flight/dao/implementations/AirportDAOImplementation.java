@@ -28,6 +28,7 @@ public class AirportDAOImplementation implements IDAO<Airport> {
         int cityID = res.getInt(3);
         City city = DAOFactory.getInstance().getCityDAO().Find(cityID);
         Airport airport = new Airport(airportName, city);
+        airport.setID(airportID);
         return airport;
     }
     @Override

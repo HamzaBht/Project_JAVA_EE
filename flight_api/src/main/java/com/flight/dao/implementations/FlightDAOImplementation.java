@@ -36,9 +36,9 @@ public class FlightDAOImplementation implements IDAO<Flight> {
     @Override
     public int Create(Flight flight) throws DAOException {
         try {
-            String sql= "insert into vol (datedepart,datearrivee,heuredepart,heurearrivee,price" +
+            String sql= "insert ignore into vol (datedepart,datearrivee,heuredepart,heurearrivee,price" +
                     ",aeroport_idaeroportdepart,aeroport_idaeroportarrivee,cabine_idcabine,isreservationavailable) " +
-                    "values(?,?,?,?,?,?,?,?,?,0)";
+                    "values(?,?,?,?,?,?,?,?,?)";
             PreparedStatement prep= instance.getConnection().prepareStatement(sql);
             SetStringPrep(flight,prep);
             return prep.executeUpdate();
@@ -92,17 +92,13 @@ public class FlightDAOImplementation implements IDAO<Flight> {
     @Override
     public boolean Update(Flight flight) throws DAOException {
         try{
-            String sql="update flight set dateDepart=? and dateArrivee=? and heureDepart=? and heureArrivee=?" +
-                    "and idAeroportDepart=? and idAeroportArrivee=? and price=? and idCabine=? " +
-                    "and isReservationAvailable=? where idvol=?";
+            String sql="update vol set datedepart=?, datearrivee=?, heuredepart=?, heurearrivee=?," +
+                    "price=?, aeroport_idaeroportdepart=?, aeroport_idaeroportarrivee=?, cabine_idcabine=? " +
+                    ", isreservationavailable=? where idvol=?";
             PreparedStatement prep=instance.getConnection().prepareStatement(sql);
             SetStringPrep(flight,prep);
             prep.setString(10,String.valueOf(flight.getFlightNumber()));
-            try {
-                prep.executeUpdate();
-            }catch (Exception e){
-                return false;
-            }
+            prep.executeUpdate();
             return true;
         }
         catch (SQLException e){
