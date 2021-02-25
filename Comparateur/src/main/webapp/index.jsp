@@ -40,7 +40,7 @@
     <div class="col-md-6 image-right">
         <img class="matteo-raw-u-unsplash" src="https://anima-uploads.s3.amazonaws.com/projects/602d1c08d1681a1de21c2d38/releases/602d1da91186beac61c42d17/img/matteo-raw-gteobzvrbxu-unsplash@1x.png" />
         <div class="topnav" id="myTopnav">
-            <a href="Home.jsp" class="active">Home</a>
+            <a href="index.jsp" class="active">Home</a>
             <a href="#about">About Us</a>
             <a href="#contact">Contact</a>
             <a class="btn_book" href="Search.jsp">BOOK NOW!</a>
