@@ -1,0 +1,11 @@
+com\example\Comparateur\beans\FLIGHTAPI.class
+com\example\Comparateur\beans\Cabine.class
+com\example\Comparateur\beans\Airport.class
+com\example\Comparateur\beans\City.class
+com\example\Comparateur\beans\DepartureArrivalInfo.class
+com\example\Comparateur\beans\FLIGHTAPI$1.class
+com\example\Comparateur\beans\ListOfApis.class
+com\example\Comparateur\beans\Reservation.class
+com\example\Comparateur\HelloServlet.class
+com\example\Comparateur\beans\Flight.class
+com\example\Comparateur\beans\Pays.class

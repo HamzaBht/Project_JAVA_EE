@@ -10,13 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48053095-70f5-454d-a6b6-a272b497861e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.apt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Resources/Docs/View/Search.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/Docs/View/Search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Resources/fichier.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/fichier.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +50,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/flight_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../flight_api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,18 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FlightDAOImplementationTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.43">
     <configuration name="FlightDAOImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight_api" />
       <extension name="coverage">
@@ -179,8 +162,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.41" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <deployment>
         <artifact name="flight_api:war exploded">
           <settings>
@@ -267,12 +250,12 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.43" />
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestFindOnExistingID" />
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestFindOnNotExistingID" />
       <item itemvalue="JUnit.FlightDAOImplementationTest" />
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestCreate" />
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestUpdate" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.43" />
     </list>
     <recent_temporary>
       <list>
@@ -295,6 +278,7 @@
       <workItem from="1614169285732" duration="14640000" />
       <workItem from="1614186975276" duration="229000" />
       <workItem from="1614189709507" duration="5171000" />
+      <workItem from="1614210625260" duration="6688000" />
     </task>
     <servers />
   </component>
