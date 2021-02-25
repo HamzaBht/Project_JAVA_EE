@@ -55,9 +55,10 @@
                     </div>
                     <div class="input selectdiv">
                         <select id="class" name="class">
-						<option value="Affaire ">Affaire</option>
-						<option value="business ">Business</option>
-						<option value="premium ">Premium</option>
+						<option value="Économie ">Économie</option>
+                        <option value="Éco-premium">Éco-premium</option>
+                        <option value="Première ">Première</option>
+                        <option value="Affaire ">Affaire</option>
 					</select>
                     </div>
                     <div class="group-30-C61RwL " data-id="0d1367bb-6c04-4344-88b6-e70f3f449c3c ">
@@ -77,8 +78,8 @@
                 </div>
             </div>
         </div>
+        
         ${infos}
-
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin=" anonymous "></script>
         <script type="text/javascript " src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js "></script>
     </body>
