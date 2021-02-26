@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class OngaBungaAPI implements IFlightAPI {
-    private final String URI = "http://localhost:9999/api/flights";
+    private final String URI = "http://localhost:8080/api/flights";
     private final String Name = "OngaBunga";
     private final String URL = "";
     private final String iconLocation = "ressource/images/RAM.png";

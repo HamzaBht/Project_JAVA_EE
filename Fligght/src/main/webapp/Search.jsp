@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
         <link rel="stylesheet" href="ressource/css/style.css">
+        <script type="text/javascript" src="ressource/js/city_state.js"></script>
         <link rel="icon" href="../assets/images/large_fligght.ico" type="image/png">
         <title>Fligght || Travel with ease</title>
     </head>
@@ -39,11 +40,22 @@
                 <div class="find-the-b-ight-price-C61RwL" data-id="9b98df54-5c5d-4ad6-aecd-7d828b2967a7">Find the best flight for the right price</div>
                 <form action="Book" class="form-group" method="POST" id="search-form">
                     <div class="input">
-                        <input class="field-input" type="text" id="from" name="from" placeholder="From :">
+                        <input class="field-input" type="text" id="from" onkeyup="myFunction(id,'myUL')" name="from" placeholder="From :">
+                        <ul id="myUL" class="input" hidden>
+                            <script type="text/javascript">
+                                setRegions("from");
+                            </script>
+                        </ul>
                         <i class="fa fa-plane-departure fa-lg"></i>
                     </div>
                     <div class="input">
-                        <input class="field-input" type="text" id="to" name="to" placeholder="To :"> <i class="fa fa-plane-arrival fa-lg"></i>
+                        <input class="field-input" type="text" id="to" onkeyup="myFunction(id,'myUL2')"  name="to" placeholder="To :">
+                        <ul id="myUL2" class="input" hidden>
+                            <script type="text/javascript">
+                                setRegions("to");
+                            </script>
+                        </ul>
+                        <i class="fa fa-plane-arrival fa-lg"></i>
                     </div>
                     <div class="input">
                         <input class="field-input" type="date" id="depart" name="depart" placeholder="Depart :">
@@ -55,10 +67,11 @@
                     </div>
                     <div class="input selectdiv">
                         <select id="class" name="class">
-						<option value="economic ">Economic</option>
-						<option value="business ">Business</option>
-						<option value="premium ">Premium</option>
-					</select>
+						<option value="Économie ">Économie</option>
+                        <option value="Éco-premium">Éco-premium</option>
+                        <option value="Première ">Première</option>
+                        <option value="Affaire ">Affaire</option>
+					    </select>
                     </div>
                     <div class="group-30-C61RwL " data-id="0d1367bb-6c04-4344-88b6-e70f3f449c3c ">
                         <button type="submit" class="search-button" data-id="0649b305-d540-4165-94d0-978ccfbddce8 ">Search flights </button>

@@ -35,7 +35,7 @@ public class SearchRequest extends HttpServlet {
         String from = request.getParameter("from");
         String to = request.getParameter("to");
         LocalDate departDate = LocalDate.parse(request.getParameter("depart"));
-        LocalDate returnDate = (request.getParameter("return") != "")? LocalDate.parse(request.getParameter("return")) : null;
+        LocalDate returnDate = (!request.getParameter("return").equals(""))? LocalDate.parse(request.getParameter("return")) : null;
         String classType = request.getParameter("class");
 
         SearchQuery query = new SearchQuery();

@@ -985,4 +985,22 @@ a:hover {
     transform: translateX(-10px);
     transition: all 0.3s ease-out;
 }
+#myUL,
+#myUL2 {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a,
+#myUL2 li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block;
+}
 
