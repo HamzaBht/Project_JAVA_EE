@@ -1,9 +1,5 @@
 package com.fligght.beans;
 
-import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalTime;
-
 public class Flight {
     public int getFlightNumber() {
         return flightNumber;

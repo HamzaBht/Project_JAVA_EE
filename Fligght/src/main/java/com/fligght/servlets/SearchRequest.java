@@ -4,10 +4,7 @@ import com.fligght.data.FlightProvider;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,36 +40,21 @@ public class SearchRequest extends HttpServlet {
         query.setChildrenCount(0);
         query.setCabineClass(classType);
 
-        Airport airport = new Airport();
         City city = new City();
         city.setName(from);
-        Pays pays = new Pays();
-        pays.setName("name");
-        city.setPays(pays);
 
-        airport.setCity(city);
-        airport.setName(from);
-
-        DepartureArrivalInfo departure = new DepartureArrivalInfo();
-        departure.setAirport(airport);
-        departure.setHour(null);
+        SearchQuery.SearchDepartureArrivalInfo departure = new SearchQuery.SearchDepartureArrivalInfo();
         departure.setDate(departDate);
+        departure.setCity(city);
+
         query.setDeparture(departure);
 
-        airport = new Airport();
         city = new City();
-        pays = new Pays();
 
         city.setName(to);
-        pays.setName("name");
-        city.setPays(pays);
-
-        airport.setCity(city);
-        airport.setName(to);
-        DepartureArrivalInfo arrival = new DepartureArrivalInfo();
+        SearchQuery.SearchDepartureArrivalInfo arrival = new SearchQuery.SearchDepartureArrivalInfo();
         arrival.setDate(null);
-        arrival.setHour(null);
-        arrival.setAirport(airport);
+        arrival.setCity(city);
 
         query.setArrival(arrival);
         return query;

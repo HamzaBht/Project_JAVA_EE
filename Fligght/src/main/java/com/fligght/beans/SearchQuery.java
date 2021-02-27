@@ -1,26 +1,48 @@
 package com.fligght.beans;
 
+import java.time.LocalDate;
+
 //when the user performs a search query, an instance of this Bean is instantiated to encapsulate the search information
 public class SearchQuery {
-    private DepartureArrivalInfo departure;
-    private DepartureArrivalInfo arrival;
+    public static class SearchDepartureArrivalInfo{
+        LocalDate date;
+        City city;
+
+        public LocalDate getDate() {
+            return date;
+        }
+
+        public void setDate(LocalDate date) {
+            this.date = date;
+        }
+
+        public City getCity() {
+            return city;
+        }
+
+        public void setCity(City city) {
+            this.city = city;
+        }
+    }
+    private SearchDepartureArrivalInfo departure;
+    private SearchDepartureArrivalInfo arrival;
     private Integer adultsCount;
     private Integer childrenCount;
     private String cabineClass;
 
-    public DepartureArrivalInfo getDeparture() {
+    public SearchDepartureArrivalInfo getDeparture() {
         return departure;
     }
 
-    public void setDeparture(DepartureArrivalInfo departure) {
+    public void setDeparture(SearchDepartureArrivalInfo departure) {
         this.departure = departure;
     }
 
-    public DepartureArrivalInfo getArrival() {
+    public SearchDepartureArrivalInfo getArrival() {
         return arrival;
     }
 
-    public void setArrival(DepartureArrivalInfo arrival) {
+    public void setArrival(SearchDepartureArrivalInfo arrival) {
         this.arrival = arrival;
     }
 
