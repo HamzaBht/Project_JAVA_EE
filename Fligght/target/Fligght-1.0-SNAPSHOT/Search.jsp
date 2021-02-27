@@ -67,10 +67,11 @@
                     </div>
                     <div class="input selectdiv">
                         <select id="class" name="class">
-						<option value="economic ">Economic</option>
-						<option value="business ">Business</option>
-						<option value="premium ">Premium</option>
-					</select>
+						<option value="Économie ">Économie</option>
+                        <option value="Éco-premium">Éco-premium</option>
+                        <option value="Première ">Première</option>
+                        <option value="Affaire ">Affaire</option>
+					    </select>
                     </div>
                     <div class="group-30-C61RwL " data-id="0d1367bb-6c04-4344-88b6-e70f3f449c3c ">
                         <button type="submit" class="search-button" data-id="0649b305-d540-4165-94d0-978ccfbddce8 ">Search flights </button>

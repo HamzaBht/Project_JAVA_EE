@@ -1,5 +1,9 @@
 package com.fligght.beans;
 
+import java.sql.Time;
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Flight {
     public int getFlightNumber() {
         return flightNumber;
@@ -43,6 +47,14 @@ public class Flight {
 
     public void setFlightNumber(int flightNumber) {
         this.flightNumber = flightNumber;
+    }
+
+    public String CalculateDuration(){
+        int diffMinutes = arrivalInfo.getHourInMinutes() - departureInfo.getHourInMinutes();
+        int hours = diffMinutes / 60;
+        int minutes = diffMinutes % 60;
+        String duration = hours + "h "+ minutes + "min";
+        return duration;
     }
 
     private int flightNumber;

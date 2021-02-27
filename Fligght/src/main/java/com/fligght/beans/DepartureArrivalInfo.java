@@ -5,7 +5,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class DepartureArrivalInfo {
-
+    public int getHourInMinutes(){
+        int ans = hour.getHour() * 60 + hour.getMinute();
+        return ans;
+    }
 
     public LocalDate getDate() {
         return date;

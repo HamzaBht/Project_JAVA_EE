@@ -63,7 +63,7 @@
                         <div class="col-8 result-infos">
                             <div class="general-infos d-flex justify-content-between  my-auto">
                                 <span> <c:out value="${result.flight.departureInfo.hour}"/> - <c:out value="${result.flight.arrivalInfo.hour}"/></span>
-                                <span>2 h 55 min </span>
+                                <span> ${result.flight.CalculateDuration()} </span>
                                 <span>Sans escale</span>
                             </div>
                             <div class="extra-infos d-flex justify-content-between  my-auto">
