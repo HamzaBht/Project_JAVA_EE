@@ -17,17 +17,24 @@ public class FlightProvider {
     //then it filters the data to take only the relevant flights, and finally wrap these flights in a QueryResult bean
     //and returns the collection of the QueryResult
     static public Collection<QueryResult> GetFlightFromAPI(SearchQuery query){
+        ArrayList<IFlightAPI> flightAPIs;
         ArrayList<QueryResult> queryResults = new ArrayList<>();
-        ArrayList<IFlightAPI> flightAPIs = APIsProvider.getInstance().getFlightAPIs();
-
+        try {
+            flightAPIs = APIsProvider.getInstance().getFlightAPIs();
+        }
+        catch (Exception e){
+            return queryResults;
+        }
         boolean isCityDepartValid;
         boolean isCityArriveeValid;
         boolean isDateDepartValid;
         boolean isClasseValid;
 
         for(IFlightAPI flightAPI : flightAPIs){
-            ArrayList<Flight> flights = flightAPI.GetFlights();
-            for(Flight flight : flights){
+            ArrayList<Flight> flights;
+            try {
+                flights =flightAPI.GetFlights();
+                for(Flight flight : flights){
 //                isCityArriveeValid = query.getArrival().getAirport() == null || (flight.getArrivalInfo().getAirport().equals(query.getArrival().getAirport()));
 //                isCityDepartValid = query.getDeparture().getAirport() == null || (flight.getDepartureInfo().getAirport().equals(query.getDeparture().getAirport()));
 //                isDateDepartValid = (query.getDeparture().getDate() !=null
@@ -43,12 +50,16 @@ public class FlightProvider {
 //
 //                    queryResults.add(queryResult);
 //                }
-                QueryResult queryResult = new QueryResult();
-                queryResult.setFlight(flight);
-                queryResult.setAirlineName(flightAPI.getName());
-                queryResult.setTargetWebsiteURL(flightAPI.getURL());
-                queryResult.setIcon(flightAPI.getIconLocation());
-                queryResults.add(queryResult);
+                    QueryResult queryResult = new QueryResult();
+                    queryResult.setFlight(flight);
+                    queryResult.setAirlineName(flightAPI.getName());
+                    queryResult.setTargetWebsiteURL(flightAPI.getURL());
+                    queryResult.setIcon(flightAPI.getIconLocation());
+                    queryResults.add(queryResult);
+                }
+            }
+            catch (Exception e){
+                continue;
             }
         }
 

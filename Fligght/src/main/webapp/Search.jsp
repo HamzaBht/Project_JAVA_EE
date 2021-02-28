@@ -58,7 +58,7 @@
                         <i class="fa fa-plane-arrival fa-lg"></i>
                     </div>
                     <div class="input">
-                        <input class="field-input" type="date" id="depart" name="depart" placeholder="Depart :">
+                        <input class="field-input" type="date" id="depart" name="depart" placeholder="Depart :" required>
 
                     </div>
                     <div class="input">
