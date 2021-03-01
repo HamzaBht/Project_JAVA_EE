@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
         <link rel="stylesheet" href="ressource/css/style.css">
         <script type="text/javascript" src="ressource/js/city_state.js"></script>
-        <link rel="icon" href="../assets/images/large_fligght.ico" type="image/png">
+        <link rel="icon" href="ressource/images/large_fligght.ico" type="image/png">
         <title>Fligght || Travel with ease</title>
     </head>
 
@@ -58,7 +58,7 @@
                         <i class="fa fa-plane-arrival fa-lg"></i>
                     </div>
                     <div class="input">
-                        <input class="field-input" type="date" id="depart" name="depart" placeholder="Depart :">
+                        <input class="field-input" type="date" id="depart" name="depart" placeholder="Depart :" required>
 
                     </div>
                     <div class="input">

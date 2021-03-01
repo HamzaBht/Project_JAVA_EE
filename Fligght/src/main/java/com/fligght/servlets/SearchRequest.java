@@ -23,9 +23,15 @@ public class SearchRequest extends HttpServlet {
         SearchQuery query = GetSearchQueryFromRequest(request);
 
         Collection<QueryResult> results = FlightProvider.GetFlightFromAPI(query);
-        request.setAttribute("results", results);
 
-        this.getServletContext().getRequestDispatcher("/Result.jsp").forward(request, response);
+        if(!results.isEmpty()){
+            request.setAttribute("results", results);
+
+            this.getServletContext().getRequestDispatcher("/Result.jsp").forward(request, response);
+        }else {
+            this.getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
+        }
+
 
     }
     private SearchQuery GetSearchQueryFromRequest(HttpServletRequest request){

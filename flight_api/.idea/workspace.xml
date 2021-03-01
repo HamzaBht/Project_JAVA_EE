@@ -10,11 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48053095-70f5-454d-a6b6-a272b497861e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/beans/DepartureArrivalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/beans/DepartureArrivalInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/beans/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/beans/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/api/implementations/OngaBungaAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/api/implementations/OngaBungaAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/servlets/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/servlets/SearchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Thanks.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Thanks.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,17 +103,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.43">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FlightDAOImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight_api" />
       <extension name="coverage">
@@ -191,6 +183,7 @@
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
       <deployment>
         <artifact name="flight_api:war exploded">
           <settings>
@@ -200,6 +193,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="d31faa58-e41f-4bec-9967-af751306b4b7" />
+        <option name="HTTP_PORT" value="8081" />
         <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -312,6 +306,7 @@
       <workItem from="1614375208746" duration="922000" />
       <workItem from="1614460075590" duration="11000" />
       <workItem from="1614460674075" duration="321000" />
+      <workItem from="1614612674447" duration="3961000" />
     </task>
     <servers />
   </component>
