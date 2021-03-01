@@ -16,7 +16,7 @@
 
 ## PS : you need to be in your project dir (here Fligght)
 
-## ps 2 : if your using windows run the cmd in powershell if your using linux change ${PWD} to "$PWD"
+## ps 2 : if you are using windows run the cmd in powershell if your using linux change ${PWD} to "$PWD"
 
 ## 2- BUILD THE DOCKERFILE :
 
