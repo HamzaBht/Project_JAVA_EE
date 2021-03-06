@@ -67,10 +67,11 @@
                     </div>
                     <div class="input selectdiv">
                         <select id="class" name="class">
-						<option value="Économie ">Économie</option>
-                        <option value="Éco-premium">Éco-premium</option>
-                        <option value="Première ">Première</option>
-                        <option value="Affaire ">Affaire</option>
+
+						<option value="Economie">Économie</option>
+                        <option value="Eco-premium">Éco-premium</option>
+                        <option value="Premiere">Première</option>
+                        <option value="Affaire">Affaire</option>
 					    </select>
                     </div>
                     <div class="group-30-C61RwL " data-id="0d1367bb-6c04-4344-88b6-e70f3f449c3c ">

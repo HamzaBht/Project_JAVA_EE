@@ -28,7 +28,7 @@ public class SearchQuery {
     private SearchDepartureArrivalInfo arrival;
     private Integer adultsCount;
     private Integer childrenCount;
-    private String cabineClass;
+    private CabineClass cabineClass;
 
     public SearchDepartureArrivalInfo getDeparture() {
         return departure;
@@ -62,11 +62,11 @@ public class SearchQuery {
         this.childrenCount = childrenCount;
     }
 
-    public String getCabineClass() {
+    public CabineClass getCabineClass() {
         return cabineClass;
     }
 
-    public void setCabineClass(String cabineClass) {
+    public void setCabineClass(CabineClass cabineClass) {
         this.cabineClass = cabineClass;
     }
 }
