@@ -36,9 +36,9 @@ public class FlightProvider {
                 for(Flight flight : flights){
                     isCityDepartValid = query.getDeparture().getCity().getName().equalsIgnoreCase(flight.getDepartureInfo().getAirport().getCity().getName());
                     isCityArriveeValid = query.getArrival().getCity().getName().equalsIgnoreCase(flight.getArrivalInfo().getAirport().getCity().getName());
-                    isDateDepartValid = query.getDeparture().getDate().equals(flight.getDepartureInfo().getDate().toString());
+                    isDateDepartValid = query.getDeparture().getDate().equals(flight.getDepartureInfo().getDate());
                     isClasseValid = (query.getCabineClass() == flight.getCabine().getType());
-                    if(isCityArriveeValid && isCityDepartValid &&isDateDepartValid && isClasseValid){
+                    if(isCityDepartValid &&isDateDepartValid && isClasseValid){
                         QueryResult queryResult = new QueryResult();
                         queryResult.setFlight(flight);
                         queryResult.setAirlineName(flightAPI.getName());
