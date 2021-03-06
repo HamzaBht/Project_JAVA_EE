@@ -1,5 +1,9 @@
 package com.fligght.servlets;
-import com.fligght.beans.*;
+
+import com.fligght.beans.CabineClass;
+import com.fligght.beans.City;
+import com.fligght.beans.QueryResult;
+import com.fligght.beans.SearchQuery;
 import com.fligght.data.FlightProvider;
 
 import java.io.IOException;
@@ -11,6 +15,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Collection;
+
+import static com.fligght.beans.CabineClass.*;
 
 /**
  * Servlet implementation class SearchRequest
@@ -25,10 +34,10 @@ public class SearchRequest extends HttpServlet {
 
         Collection<QueryResult> results = FlightProvider.GetFlightFromAPI(query);
 
-        if(!results.isEmpty()){
+        if (!results.isEmpty()) {
             request.setAttribute("results", results);
             this.getServletContext().getRequestDispatcher("/Result.jsp").forward(request, response);
-        }else {
+        } else {
             this.getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
         }
 
@@ -39,7 +48,7 @@ public class SearchRequest extends HttpServlet {
         String from = request.getParameter("from");
         String to = request.getParameter("to");
         LocalDate departDate = LocalDate.parse(request.getParameter("depart"));
-        LocalDate returnDate = (!request.getParameter("return").equals(""))? LocalDate.parse(request.getParameter("return")) : null;
+        LocalDate returnDate = (!request.getParameter("return").equals("")) ? LocalDate.parse(request.getParameter("return")) : null;
         String classType = request.getParameter("class");
         CabineClass cabineClass;
         switch (classType){

@@ -10,7 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48053095-70f5-454d-a6b6-a272b497861e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/api/implementations/OngaBungaAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/api/implementations/OngaBungaAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/data/FlightProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/data/FlightProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/servlets/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/servlets/SearchRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/ressource/js/city_state.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/ressource/js/city_state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Result.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +308,9 @@
       <workItem from="1614460075590" duration="11000" />
       <workItem from="1614460674075" duration="321000" />
       <workItem from="1614612674447" duration="3961000" />
-      <workItem from="1615045231650" duration="1255000" />
+      <workItem from="1615045231650" duration="1461000" />
+      <workItem from="1615047307583" duration="601000" />
+      <workItem from="1615048818340" duration="1849000" />
     </task>
     <servers />
   </component>

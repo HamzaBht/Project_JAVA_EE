@@ -7,6 +7,7 @@ import com.fligght.beans.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Locale;
 
 public class FlightProvider {
 
