@@ -3,6 +3,7 @@ import com.fligght.beans.*;
 import com.fligght.data.FlightProvider;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.Collection;
 import javax.servlet.ServletException;
@@ -33,7 +34,8 @@ public class SearchRequest extends HttpServlet {
 
 
     }
-    private SearchQuery GetSearchQueryFromRequest(HttpServletRequest request){
+    private SearchQuery GetSearchQueryFromRequest(HttpServletRequest request) throws UnsupportedEncodingException {
+        request.setCharacterEncoding("UTF-8");
         String from = request.getParameter("from");
         String to = request.getParameter("to");
         LocalDate departDate = LocalDate.parse(request.getParameter("depart"));
