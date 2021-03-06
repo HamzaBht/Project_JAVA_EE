@@ -8,6 +8,8 @@ body {
     font-family: "Montserrat", Helvetica, Arial, serif;
     overflow-x: hidden;
     height: 100vh;
+    background-image: url(../images/mark-fairhurst-iu2SsNekXWE-unsplash.jpg);
+    background-size: cover;
 }
 
 .row {
@@ -832,7 +834,7 @@ a:hover {
 }
 
 .result-block {
-    background-image: url(../images/mark-fairhurst-iu2SsNekXWE-unsplash.jpg);
+    /*background-image: url(../images/mark-fairhurst-iu2SsNekXWE-unsplash.jpg);*/
     background-position: 0%;
     margin-top: 140px;
     background-repeat: repeat-y;

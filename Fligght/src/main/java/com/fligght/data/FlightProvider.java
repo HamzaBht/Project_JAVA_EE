@@ -4,6 +4,7 @@ import com.fligght.api.APIsProvider;
 import com.fligght.api.IFlightAPI;
 import com.fligght.beans.*;
 
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -50,12 +51,28 @@ public class FlightProvider {
 //
 //                    queryResults.add(queryResult);
 //                }
-                    QueryResult queryResult = new QueryResult();
-                    queryResult.setFlight(flight);
-                    queryResult.setAirlineName(flightAPI.getName());
-                    queryResult.setTargetWebsiteURL(flightAPI.getURL());
-                    queryResult.setIcon(flightAPI.getIconLocation());
-                    queryResults.add(queryResult);
+                    isCityDepartValid = query.getDeparture().getCity().getName().equals(flight.getDepartureInfo().getAirport().getCity().getName());
+                    isCityArriveeValid = query.getArrival().getCity().getName().equals(flight.getArrivalInfo().getAirport().getCity().getName());
+                    isDateDepartValid = query.getDeparture().getDate().toString().equals(flight.getDepartureInfo().getDate().toString());
+                    isClasseValid = query.getCabineClass().equalsIgnoreCase(flight.getCabine().getType());
+                    System.out.println(isCityDepartValid + " "+isCityArriveeValid + " " + isDateDepartValid + " "+isClasseValid);
+
+                    System.out.println(query.getDeparture().getCity().getName() + "--->" + flight.getDepartureInfo().getAirport().getCity().getName());
+                    System.out.println(("-------------------------------------------"));
+                    System.out.println(query.getArrival().getCity().getName() + "--->" + flight.getArrivalInfo().getAirport().getCity().getName());
+                    System.out.println(("-------------------------------------------"));
+                    System.out.println(query.getDeparture().getDate().toString() + "--->" + flight.getDepartureInfo().getDate().toString());
+                    System.out.println(("-------------------------------------------"));
+                    System.out.println(query.getCabineClass()+ "--->" + flight.getCabine().getType());
+                    System.out.println(("**************************************************************************************************"));
+                    if(isCityArriveeValid && isCityDepartValid &&isDateDepartValid && isClasseValid){
+                        QueryResult queryResult = new QueryResult();
+                        queryResult.setFlight(flight);
+                        queryResult.setAirlineName(flightAPI.getName());
+                        queryResult.setTargetWebsiteURL(flightAPI.getURL());
+                        queryResult.setIcon(flightAPI.getIconLocation());
+                        queryResults.add(queryResult);
+                    }
                 }
             }
             catch (Exception e){
