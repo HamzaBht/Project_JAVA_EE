@@ -34,11 +34,18 @@ public class SearchRequest extends HttpServlet {
         LocalDate departDate = LocalDate.parse(request.getParameter("depart"));
         LocalDate returnDate = (!request.getParameter("return").equals(""))? LocalDate.parse(request.getParameter("return")) : null;
         String classType = request.getParameter("class");
-
+        CabineClass cabineClass;
+        switch (classType){
+            case "Premiere" : cabineClass = CabineClass.FirstClass;
+            case "Affaire" : cabineClass = CabineClass.BusinessClass;
+            case "Eco-premium" : cabineClass = CabineClass.PremiumEconomy;
+            case "Economie" : cabineClass = CabineClass.Economy;
+            default: cabineClass = CabineClass.OTHER;
+        }
         SearchQuery query = new SearchQuery();
         query.setAdultsCount(1);
         query.setChildrenCount(0);
-        query.setCabineClass(classType);
+        query.setCabineClass(cabineClass);
 
         City city = new City();
         city.setName(from);
