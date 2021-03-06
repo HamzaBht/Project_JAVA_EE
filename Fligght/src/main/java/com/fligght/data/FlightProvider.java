@@ -11,7 +11,7 @@ import java.util.Comparator;
 public class FlightProvider {
 
 
-    //this methode takes in input the query from the search request, and communicate with the APIs to get flight dat
+    //this methode takes in input the query from the search request, and communicate with the APIs to get flight data
     //then it filters the data to take only the relevant flights, and finally wrap these flights in a QueryResult bean
     //and returns the collection of the QueryResult
     static public Collection<QueryResult> GetFlightFromAPI(SearchQuery query){
@@ -36,7 +36,7 @@ public class FlightProvider {
                     isCityDepartValid = query.getDeparture().getCity().getName().equals(flight.getDepartureInfo().getAirport().getCity().getName());
                     isCityArriveeValid = query.getArrival().getCity().getName().equals(flight.getArrivalInfo().getAirport().getCity().getName());
                     isDateDepartValid = query.getDeparture().getDate().toString().equals(flight.getDepartureInfo().getDate().toString());
-                    isClasseValid = query.getCabineClass().equalsIgnoreCase(flight.getCabine().getType());
+                    isClasseValid = query.getCabineClass() == flight.getCabine().getType();
 
                     if(isCityArriveeValid && isCityDepartValid &&isDateDepartValid && isClasseValid){
                         QueryResult queryResult = new QueryResult();
