@@ -270,20 +270,7 @@ INSERT INTO `ville` (`nom`, `idVille`, `Pays_idpays`) VALUES
 ('Kaunas', 42, 17),
 ('Sandweiler', 43, 18),
 ('Amsterdam', 44, 19),
-('Tirana', 45, 20),
-('hoceima', 70, 1),
-('hoceima', 71, 1),
-('hoceima', 72, 1),
-('hoceima', 73, 1),
-('hoceima', 74, 1),
-('hoceima', 75, 1),
-('hoceima', 76, 1),
-('hoceima', 77, 1),
-('hoceima', 78, 1),
-('hoceima', 79, 1),
-('hoceima', 80, 1),
-('Nador', 81, 1),
-('Nador', 82, 1);
+('Tirana', 45, 20);
 
 -- --------------------------------------------------------
 

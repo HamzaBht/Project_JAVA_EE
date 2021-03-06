@@ -7,6 +7,7 @@ import com.fligght.beans.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Locale;
 
 public class FlightProvider {
 
@@ -37,6 +38,13 @@ public class FlightProvider {
                     isCityArriveeValid = query.getArrival().getCity().getName().equals(flight.getArrivalInfo().getAirport().getCity().getName());
                     isDateDepartValid = query.getDeparture().getDate().toString().equals(flight.getDepartureInfo().getDate().toString());
                     isClasseValid = query.getCabineClass() == flight.getCabine().getType();
+
+                    System.out.println(isCityDepartValid+" "+isCityArriveeValid+" "+isDateDepartValid+" "+isClasseValid);
+                    System.out.println(query.getDeparture().getCity().getName() + "-->" + flight.getDepartureInfo().getAirport().getCity().getName());
+                    System.out.println(query.getArrival().getCity().getName() + "-->" + flight.getArrivalInfo().getAirport().getCity().getName());
+                    System.out.println(query.getDeparture().getDate().toString() + "-->" + flight.getDepartureInfo().getDate().toString());
+                    System.out.println(query.getCabineClass() + "-->" + flight.getCabine().getType());
+                    System.out.println("--------------------------------------------------------");
 
                     if(isCityArriveeValid && isCityDepartValid &&isDateDepartValid && isClasseValid){
                         QueryResult queryResult = new QueryResult();

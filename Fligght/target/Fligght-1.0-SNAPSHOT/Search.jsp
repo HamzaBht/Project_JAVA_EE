@@ -38,7 +38,7 @@
             <img class="mask-group-5-C61RwL" data-id="c538cadd-7b21-4d2f-b555-33be10bcf0e0" src="https://cdn.animaapp.com/projects/602d1c08d1681a1de21c2d38/releases/602d1da91186beac61c42d17/img/mask-group-5@1x.png" anima-src="https://cdn.animaapp.com/projects/602d1c08d1681a1de21c2d38/releases/602d1da91186beac61c42d17/img/mask-group-5@1x.png">
             <div class="row">
                 <div class="find-the-b-ight-price-C61RwL" data-id="9b98df54-5c5d-4ad6-aecd-7d828b2967a7">Find the best flight for the right price</div>
-                <form action="Book" class="form-group" method="POST" id="search-form">
+                <form action="Book" class="form-group" method="POST" id="search-form" autocomplete="off">
                     <div class="input">
                         <input class="field-input" type="text" id="from" onkeyup="myFunction(id,'myUL')" name="from" placeholder="From :">
                         <ul id="myUL" class="input" hidden>
@@ -67,6 +67,7 @@
                     </div>
                     <div class="input selectdiv">
                         <select id="class" name="class">
+
 						<option value="Economie">Économie</option>
                         <option value="Eco-premium">Éco-premium</option>
                         <option value="Premiere">Première</option>

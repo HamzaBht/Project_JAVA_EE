@@ -76,7 +76,7 @@
                                                 <span class="price">
                             <c:out value="${result.flight.price}"/>
                         </span>
-                                                <a href="<c:url value=" Thanks.jsp "><c:param name="redirect " value="${result.targetWebsiteURL} "/></c:url>" class="view-deal-link">View Deal</a>
+                                                <a href="<c:url value="Thanks.jsp"><c:param name="redirect " value="${result.targetWebsiteURL} "/></c:url>" class="view-deal-link">View Deal</a>
                                             </div>
                                         </div>
                                     </c:forEach>
