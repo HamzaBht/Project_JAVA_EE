@@ -26,7 +26,6 @@ public class SearchRequest extends HttpServlet {
 
         if(!results.isEmpty()){
             request.setAttribute("results", results);
-
             this.getServletContext().getRequestDispatcher("/Result.jsp").forward(request, response);
         }else {
             this.getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
@@ -42,10 +41,10 @@ public class SearchRequest extends HttpServlet {
         String classType = request.getParameter("class");
         CabineClass cabineClass;
         switch (classType){
-            case "Premiere" : cabineClass = CabineClass.FirstClass;
-            case "Affaire" : cabineClass = CabineClass.BusinessClass;
-            case "Eco-premium" : cabineClass = CabineClass.PremiumEconomy;
-            case "Economie" : cabineClass = CabineClass.Economy;
+            case "Premiere" : cabineClass = CabineClass.FirstClass; break;
+            case "Affaire" : cabineClass = CabineClass.BusinessClass; break;
+            case "Eco-premium" : cabineClass = CabineClass.PremiumEconomy; break;
+            case "Economie" : cabineClass = CabineClass.Economy; break;
             default: cabineClass = CabineClass.OTHER;
         }
         SearchQuery query = new SearchQuery();

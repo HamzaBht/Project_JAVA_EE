@@ -149,10 +149,10 @@ public class OngaBungaAPI implements IFlightAPI {
             String apiCabineType =jsonObject.getString("type");
             CabineClass ourCabineType;
             switch (apiCabineType){
-                case "Première" : ourCabineType = CabineClass.FirstClass;
-                case "Affaire" : ourCabineType = CabineClass.BusinessClass;
-                case "Éco-premium" : ourCabineType = CabineClass.PremiumEconomy;
-                case "Économie" : ourCabineType = CabineClass.Economy;
+                case "Première" : ourCabineType = CabineClass.FirstClass; break;
+                case "Affaire" : ourCabineType = CabineClass.BusinessClass; break;
+                case "Éco-premium" : ourCabineType = CabineClass.PremiumEconomy; break;
+                case "Économie" : ourCabineType = CabineClass.Economy; break;
                 default: ourCabineType = CabineClass.OTHER;
             }
             cabine.setType(ourCabineType);

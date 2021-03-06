@@ -33,11 +33,10 @@ public class FlightProvider {
             try {
                 flights =flightAPI.GetFlights();
                 for(Flight flight : flights){
-                    isCityDepartValid = query.getDeparture().getCity().getName().equals(flight.getDepartureInfo().getAirport().getCity().getName());
-                    isCityArriveeValid = query.getArrival().getCity().getName().equals(flight.getArrivalInfo().getAirport().getCity().getName());
-                    isDateDepartValid = query.getDeparture().getDate().toString().equals(flight.getDepartureInfo().getDate().toString());
-                    isClasseValid = query.getCabineClass() == flight.getCabine().getType();
-
+                    isCityDepartValid = query.getDeparture().getCity().getName().equalsIgnoreCase(flight.getDepartureInfo().getAirport().getCity().getName());
+                    isCityArriveeValid = query.getArrival().getCity().getName().equalsIgnoreCase(flight.getArrivalInfo().getAirport().getCity().getName());
+                    isDateDepartValid = query.getDeparture().getDate().equals(flight.getDepartureInfo().getDate().toString());
+                    isClasseValid = (query.getCabineClass() == flight.getCabine().getType());
                     if(isCityArriveeValid && isCityDepartValid &&isDateDepartValid && isClasseValid){
                         QueryResult queryResult = new QueryResult();
                         queryResult.setFlight(flight);
