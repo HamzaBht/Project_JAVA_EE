@@ -2,15 +2,15 @@ package com.fligght.beans;
 
 
 public class Cabine {
-    private String type;
+    private CabineClass type;
     private int capacity;
     private int availablePlaces;
 
-    public String getType() {
+    public CabineClass getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(CabineClass type) {
         this.type = type;
     }
 
