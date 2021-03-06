@@ -67,6 +67,7 @@
                     </div>
                     <div class="input selectdiv">
                         <select id="class" name="class">
+
 						<option value="Economie">Économie</option>
                         <option value="Eco-premium">Éco-premium</option>
                         <option value="Premiere">Première</option>

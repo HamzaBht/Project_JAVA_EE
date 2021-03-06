@@ -146,7 +146,16 @@ public class OngaBungaAPI implements IFlightAPI {
         @Override
         public Cabine adaptFromJson(JsonObject jsonObject) throws Exception {
             Cabine cabine = new Cabine();
-            cabine.setType(jsonObject.getString("type"));
+            String apiCabineType =jsonObject.getString("type");
+            CabineClass ourCabineType;
+            switch (apiCabineType){
+                case "Première" : ourCabineType = CabineClass.FirstClass;
+                case "Affaire" : ourCabineType = CabineClass.BusinessClass;
+                case "Éco-premium" : ourCabineType = CabineClass.PremiumEconomy;
+                case "Économie" : ourCabineType = CabineClass.Economy;
+                default: ourCabineType = CabineClass.OTHER;
+            }
+            cabine.setType(ourCabineType);
             cabine.setCapacity(jsonObject.getInt("capacity"));
             cabine.setAvailablePlaces(jsonObject.getInt("availablePlaces"));
             return cabine;
