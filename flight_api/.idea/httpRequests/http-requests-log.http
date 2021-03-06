@@ -1,3 +1,15 @@
+GET http://localhost:8081/api/flights
+
+<> 2021-03-06T220519.200.json
+
+###
+
+GET http://localhost:8081/api/flights
+
+<> 2021-03-06T220212.500.html
+
+###
+
 GET http://localhost:8080/api/flights
 
 <> 2021-02-24T171739.200.json

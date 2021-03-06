@@ -7,6 +7,7 @@ import com.fligght.beans.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class FlightProvider {
 
@@ -33,12 +34,12 @@ public class FlightProvider {
             try {
                 flights =flightAPI.GetFlights();
                 for(Flight flight : flights){
-                    isCityDepartValid = query.getDeparture().getCity().getName().equals(flight.getDepartureInfo().getAirport().getCity().getName());
-                    isCityArriveeValid = query.getArrival().getCity().getName().equals(flight.getArrivalInfo().getAirport().getCity().getName());
-                    isDateDepartValid = query.getDeparture().getDate().toString().equals(flight.getDepartureInfo().getDate().toString());
+                    isCityDepartValid = query.getDeparture().getCity().getName().equals(flight.getDepartureInfo().getAirport().getCity().getName()) || query.getDeparture().getCity().getName().equals("");
+                    isCityArriveeValid = query.getArrival().getCity().getName().equals(flight.getArrivalInfo().getAirport().getCity().getName()) || query.getDeparture().getCity().getName().equals("");
+                    isDateDepartValid =   query.getDeparture().getDate()==null || query.getDeparture().getDate().toString().equals(flight.getDepartureInfo().getDate().toString()) ;
                     isClasseValid = query.getCabineClass() == flight.getCabine().getType();
 
-                    if(isCityArriveeValid && isCityDepartValid &&isDateDepartValid && isClasseValid){
+                    if(isCityArriveeValid && isCityDepartValid && isDateDepartValid && isClasseValid){
                         QueryResult queryResult = new QueryResult();
                         queryResult.setFlight(flight);
                         queryResult.setAirlineName(flightAPI.getName());

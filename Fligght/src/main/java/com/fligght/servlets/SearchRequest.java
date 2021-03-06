@@ -20,12 +20,15 @@ public class SearchRequest extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         SearchQuery query = GetSearchQueryFromRequest(request);
+        System.out.println(query.getDeparture().getCity().getName());
 
         Collection<QueryResult> results = FlightProvider.GetFlightFromAPI(query);
 
         if(!results.isEmpty()){
             request.setAttribute("results", results);
+
 
             this.getServletContext().getRequestDispatcher("/Result.jsp").forward(request, response);
         }else {
@@ -37,7 +40,7 @@ public class SearchRequest extends HttpServlet {
     private SearchQuery GetSearchQueryFromRequest(HttpServletRequest request){
         String from = request.getParameter("from");
         String to = request.getParameter("to");
-        LocalDate departDate = LocalDate.parse(request.getParameter("depart"));
+        LocalDate departDate = (!request.getParameter("depart").equals(""))? LocalDate.parse(request.getParameter("depart")) : null;
         LocalDate returnDate = (!request.getParameter("return").equals(""))? LocalDate.parse(request.getParameter("return")) : null;
         String classType = request.getParameter("class");
         CabineClass cabineClass;

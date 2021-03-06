@@ -20,7 +20,6 @@
                 </head>
 
                 <body>
-
                     <div class="row clearfix">
                         <div class="col-md-12 rectangle-20-C61RwL">
                             <div class="group-14-C61RwL" data-id="1b1078a7-6df4-48cc-9aa6-630307eb5726">

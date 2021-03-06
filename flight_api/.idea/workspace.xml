@@ -11,13 +11,57 @@
   <component name="ChangeListManager">
     <list default="true" id="48053095-70f5-454d-a6b6-a272b497861e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/data/FlightProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/data/FlightProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/servlets/SearchRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/java/com/fligght/servlets/SearchRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Result.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/Search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/Search.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/ressource/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/ressource/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/src/main/webapp/ressource/js/city_state.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/src/main/webapp/ressource/js/city_state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Result.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/Search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/APIsProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/APIsProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/IFlightAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/IFlightAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$AirportAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$AirportAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$CabineAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$CabineAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$CityAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$CityAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$DepartureArrivalInfoAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$DepartureArrivalInfoAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$FlightAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$FlightAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$PaysAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI$PaysAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/api/implementations/OngaBungaAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Airport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Airport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Cabine.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Cabine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/DepartureArrivalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/DepartureArrivalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Flight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Pays.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/Pays.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/QueryResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/QueryResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/SearchQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/beans/SearchQuery.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/data/FlightProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/data/FlightProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/servlets/SearchRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/WEB-INF/classes/com/fligght/servlets/SearchRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/ressource/js/city_state.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/Fligght-1.0-SNAPSHOT/ressource/js/city_state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/APIsProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/APIsProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/IFlightAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/IFlightAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$AirportAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$AirportAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$CabineAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$CabineAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$CityAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$CityAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$DepartureArrivalInfoAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$DepartureArrivalInfoAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$FlightAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$FlightAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$PaysAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI$PaysAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/api/implementations/OngaBungaAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Airport.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Airport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Cabine.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Cabine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/DepartureArrivalInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/DepartureArrivalInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Flight.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Pays.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/Pays.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/QueryResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/QueryResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/SearchQuery.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/beans/SearchQuery.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/data/FlightProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/data/FlightProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/servlets/SearchRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/classes/com/fligght/servlets/SearchRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Fligght/target/test-classes/com/fligght/api/implementations/OngaBungaAPITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Fligght/target/test-classes/com/fligght/api/implementations/OngaBungaAPITest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +125,13 @@
       <list>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8081/api/flights" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:8080/api/flights" />
           <option name="urlPath" value="" />
           <option name="textToSend" value="" />
@@ -103,6 +154,9 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.43">
+    <configuration name="generated-requests#8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="FlightDAOImplementationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight_api" />
       <extension name="coverage">
@@ -150,22 +204,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightDAOImplementationTest.TestFindOnNotExistingID" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="flight_api" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.flight.dao.implementations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.flight.dao.implementations" />
-      <option name="MAIN_CLASS_NAME" value="com.flight.dao.implementations.FlightDAOImplementationTest" />
-      <option name="METHOD_NAME" value="TestFindOnNotExistingID" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FlightDAOImplementationTest.TestUpdate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="flight_api" />
       <extension name="coverage">
@@ -182,8 +220,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8081/" />
+    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.41" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
         <artifact name="flight_api:war exploded">
           <settings>
@@ -273,19 +310,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestFindOnExistingID" />
-      <item itemvalue="JUnit.FlightDAOImplementationTest.TestFindOnNotExistingID" />
       <item itemvalue="JUnit.FlightDAOImplementationTest" />
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestCreate" />
       <item itemvalue="JUnit.FlightDAOImplementationTest.TestUpdate" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.43" />
+      <item itemvalue="HTTP Request.generated-requests#8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests#8" />
         <item itemvalue="JUnit.FlightDAOImplementationTest" />
         <item itemvalue="JUnit.FlightDAOImplementationTest.TestUpdate" />
         <item itemvalue="JUnit.FlightDAOImplementationTest.TestFindOnExistingID" />
         <item itemvalue="JUnit.FlightDAOImplementationTest.TestCreate" />
-        <item itemvalue="JUnit.FlightDAOImplementationTest.TestFindOnNotExistingID" />
       </list>
     </recent_temporary>
   </component>
@@ -308,6 +345,8 @@
       <workItem from="1614460674075" duration="321000" />
       <workItem from="1614612674447" duration="3961000" />
       <workItem from="1615045231650" duration="1255000" />
+      <workItem from="1615058398380" duration="359000" />
+      <workItem from="1615063156566" duration="1751000" />
     </task>
     <servers />
   </component>
