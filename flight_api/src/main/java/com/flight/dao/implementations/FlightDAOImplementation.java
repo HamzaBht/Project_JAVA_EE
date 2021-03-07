@@ -35,34 +35,59 @@ public class FlightDAOImplementation implements IDAO<Flight> {
 
     @Override
     public int Create(Flight flight) throws DAOException {
+        Connection connection = null;
         try {
             String sql= "insert ignore into vol (datedepart,datearrivee,heuredepart,heurearrivee,price" +
                     ",aeroport_idaeroportdepart,aeroport_idaeroportarrivee,cabine_idcabine,isreservationavailable) " +
                     "values(?,?,?,?,?,?,?,?,?)";
-            PreparedStatement prep= instance.getConnection().prepareStatement(sql);
+            connection = instance.getConnection();
+            PreparedStatement prep= connection.prepareStatement(sql);
             SetStringPrep(flight,prep);
-            return prep.executeUpdate();
+            int status = prep.executeUpdate();
+            connection.close();
+            return status;
         }
         catch (SQLException e) {
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 
     @Override
     public Flight Find(int id) throws DAOException {
+        Connection connection = null;
         try{
             String sql="select * from vol where idvol=?  limit 1";
-            PreparedStatement prep=instance.getConnection().prepareStatement(sql);
+            connection = instance.getConnection();
+            PreparedStatement prep=connection.prepareStatement(sql);
             prep.setString(1,String.valueOf(id));
             ResultSet res=prep.executeQuery();
             Flight flight = null;
             if(res.next()){
                 flight = map(res);
             }
+            connection.close();
             return flight;
         }
         catch (SQLException e) {
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 
@@ -91,53 +116,85 @@ public class FlightDAOImplementation implements IDAO<Flight> {
 
     @Override
     public boolean Update(Flight flight) throws DAOException {
+        Connection connection = null;
         try{
             String sql="update vol set datedepart=?, datearrivee=?, heuredepart=?, heurearrivee=?," +
                     "price=?, aeroport_idaeroportdepart=?, aeroport_idaeroportarrivee=?, cabine_idcabine=? " +
                     ", isreservationavailable=? where idvol=?";
-            PreparedStatement prep=instance.getConnection().prepareStatement(sql);
+            connection = instance.getConnection();
+            PreparedStatement prep=connection.prepareStatement(sql);
             SetStringPrep(flight,prep);
             prep.setString(10,String.valueOf(flight.getFlightNumber()));
             prep.executeUpdate();
+            connection.close();
             return true;
         }
         catch (SQLException e){
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 
     @Override
     public boolean Remove(int id) throws DAOException {
+        Connection connection = null;
         try {
-            PreparedStatement prep = instance.getConnection().prepareStatement("delete from flight where idvol=?");
+            connection = instance.getConnection();
+            PreparedStatement prep = connection.prepareStatement("delete from flight where idvol=?");
             prep.setString(1, String.valueOf(id));
-            try {
-                prep.executeUpdate();
-            } catch (Exception e) {
-                return false;
-            }
+            prep.executeUpdate();
+            connection.close();
             return true;
         }
         catch (SQLException e){
             throw new DAOException(e);
         }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
+        }
     }
 
     @Override
     public Collection<Flight> findAll() throws DAOException {
+        Connection connection = null;
         try{
             ArrayList<Flight> flights = new ArrayList<>();
             String sql="select * from vol";
-            PreparedStatement prep=instance.getConnection().prepareStatement(sql);
+            connection = instance.getConnection();
+            PreparedStatement prep=connection.prepareStatement(sql);
             ResultSet res=prep.executeQuery();
             while (res.next()){
                 Flight flight = map(res);
                 flights.add(flight);
             }
+            connection.close();
             return flights;
         }
         catch (SQLException e) {
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ body {
     height: 100vh;
     background-image: url(../images/mark-fairhurst-iu2SsNekXWE-unsplash.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .row {
@@ -526,7 +527,7 @@ a:hover {
     letter-spacing: 0.00px;
     line-height: 83px;
     width: 100%;
-    margin-left: 350px
+    margin-left: 350px;
 }
 
 .span0-BjrVDn {
@@ -882,6 +883,15 @@ a:hover {
     border-radius: 10px;
     height: 100px;
 }
+.result-block .result-wrapper ul{
+    list-style-type: none;
+    overflow-x: hidden;
+    overflow-y:paged-y-controls ;
+    height: 350px;
+}
+.result-block .result-wrapper ul li {
+    display: block;
+}
 
 .result-infos {
     display: flex;
@@ -992,6 +1002,11 @@ a:hover {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-left: -10px;
+    overflow-x: hidden;
+    overflow-y:paged-y-controls ;
+    height: 200px;
+
 }
 
 #myUL li a,

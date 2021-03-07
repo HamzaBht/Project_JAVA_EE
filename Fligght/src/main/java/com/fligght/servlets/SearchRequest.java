@@ -1,8 +1,13 @@
 package com.fligght.servlets;
-import com.fligght.beans.*;
+
+import com.fligght.beans.CabineClass;
+import com.fligght.beans.City;
+import com.fligght.beans.QueryResult;
+import com.fligght.beans.SearchQuery;
 import com.fligght.data.FlightProvider;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.Collection;
 import javax.servlet.ServletException;
@@ -22,34 +27,44 @@ public class SearchRequest extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         SearchQuery query = GetSearchQueryFromRequest(request);
-        System.out.println(query.getDeparture().getCity().getName());
 
         Collection<QueryResult> results = FlightProvider.GetFlightFromAPI(query);
 
-        if(!results.isEmpty()){
+        if (!results.isEmpty()) {
             request.setAttribute("results", results);
-
-
             this.getServletContext().getRequestDispatcher("/Result.jsp").forward(request, response);
-        }else {
+        } else {
             this.getServletContext().getRequestDispatcher("/Error.jsp").forward(request, response);
         }
 
-
     }
-    private SearchQuery GetSearchQueryFromRequest(HttpServletRequest request){
+
+    private SearchQuery GetSearchQueryFromRequest(HttpServletRequest request) throws UnsupportedEncodingException {
+        request.setCharacterEncoding("UTF-8");
         String from = request.getParameter("from");
         String to = request.getParameter("to");
-        LocalDate departDate = (!request.getParameter("depart").equals(""))? LocalDate.parse(request.getParameter("depart")) : null;
-        LocalDate returnDate = (!request.getParameter("return").equals(""))? LocalDate.parse(request.getParameter("return")) : null;
+        LocalDate departDate = (!request.getParameter("depart").equals(""))
+                ? LocalDate.parse(request.getParameter("depart"))
+                : null ;
+        // LocalDate returnDate = (!request.getParameter("return").equals(""))?
+        // LocalDate.parse(request.getParameter("return")) : null;
         String classType = request.getParameter("class");
         CabineClass cabineClass;
-        switch (classType){
-            case "Premiere" : cabineClass = CabineClass.FirstClass;
-            case "Affaire" : cabineClass = CabineClass.BusinessClass;
-            case "Eco-premium" : cabineClass = CabineClass.PremiumEconomy;
-            case "Economie" : cabineClass = CabineClass.Economy;
-            default: cabineClass = CabineClass.OTHER;
+        switch (classType) {
+        case "Premiere":
+            cabineClass = CabineClass.FirstClass;
+            break;
+        case "Affaire":
+            cabineClass = CabineClass.BusinessClass;
+            break;
+        case "Eco-premium":
+            cabineClass = CabineClass.PremiumEconomy;
+            break;
+        case "Economie":
+            cabineClass = CabineClass.Economy;
+            break;
+        default:
+            cabineClass = CabineClass.OTHER;
         }
         SearchQuery query = new SearchQuery();
         query.setAdultsCount(1);

@@ -52,34 +52,38 @@
                             </div>
                         </div>
                         <div class="result-wrapper">
+                            <ul>
                             <%-- this is gonna be the container of our results --%>
                                 <%-- we gonna iterate over all the flights in the collection and put its data in this container --%>
                                     <c:forEach items="${results}" var="result">
-                                        <div class="row result-content">
-                                            <div class="col-2 airline-logo">
-                                                <img src="<c:out value=" ${result.icon} "/>" alt="" width="90px" height="90px">
-                                            </div>
-                                            <div class="col-8 result-infos">
-                                                <div class="general-infos d-flex justify-content-between  my-auto">
-                                                    <span> <c:out value="${result.flight.departureInfo.hour}"/> - <c:out value="${result.flight.arrivalInfo.hour}"/></span>
-                                                    <span> ${result.flight.CalculateDuration()} </span>
-                                                    <span>Sans escale</span>
+                                        <li>
+                                            <div class="row result-content">
+                                                <div class="col-2 airline-logo">
+                                                    <img src="<c:out value=" ${result.icon} "/>" alt="" width="90px" height="90px">
                                                 </div>
-                                                <div class="extra-infos d-flex justify-content-between  my-auto">
-                                                    <span><c:out value="${result.airlineName}"/></span>
-                                                    <span><c:out value="${result.flight.departureInfo.airport.name}"/> - <c:out value="${result.flight.arrivalInfo.airport.name}"/></span>
-                                                    <span style="color: white;">Sans escale</span>
+                                                <div class="col-8 result-infos">
+                                                    <div class="general-infos d-flex justify-content-between  my-auto">
+                                                        <span> <c:out value="${result.flight.departureInfo.hour}"/> - <c:out value="${result.flight.arrivalInfo.hour}"/></span>
+                                                        <span> ${result.flight.CalculateDuration()} </span>
+                                                        <span>Sans escale</span>
+                                                    </div>
+                                                    <div class="extra-infos d-flex justify-content-between  my-auto">
+                                                        <span><c:out value="${result.airlineName}"/></span>
+                                                        <span><c:out value="${result.flight.departureInfo.airport.name}"/> - <c:out value="${result.flight.arrivalInfo.airport.name}"/></span>
+                                                        <span style="color: white;">Sans escale</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-2 preview-block">
+                                                <div class="col-2 preview-block">
                                                 <span class="price">
-                            <c:out value="${result.flight.price}"/>
-                        </span>
-                                                <a href="<c:url value=" Thanks.jsp "><c:param name="redirect " value="${result.targetWebsiteURL} "/></c:url>" class="view-deal-link">View Deal</a>
+                                                    <c:out value="${result.flight.price}"/> MAD
+                                                </span>
+                                                    <a href="<c:url value="Thanks.jsp"><c:param name="redirect " value="${result.targetWebsiteURL} "/></c:url>" class="view-deal-link">View Deal</a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </li>
                                     </c:forEach>
                                     <%-- end of container --%>
+                            </ul>
                         </div>
 
                     </div>

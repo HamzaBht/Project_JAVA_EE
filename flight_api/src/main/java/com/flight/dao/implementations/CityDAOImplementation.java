@@ -6,6 +6,7 @@ import com.flight.dao.IDAO;
 import com.flight.api.beans.City;
 import com.flight.api.beans.Pays;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,32 +24,57 @@ public class CityDAOImplementation implements IDAO<City> {
     }
     @Override
     public int Create(City city) throws DAOException {
+        Connection connection = null;
         try{
+            connection = instance.getConnection();
             String sql="insert into ville (nom,pays_idpays) values(?,?) ";
-            PreparedStatement prep= instance.getConnection().prepareStatement(sql);
+            PreparedStatement prep= connection.prepareStatement(sql);
             SetStringPrep(city,prep);
-            return prep.executeUpdate();
+            int status = prep.executeUpdate();
+            connection.close();;
+            return status;
         }
         catch (SQLException e){
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 
     @Override
     public City Find(int id) throws DAOException {
+        Connection connection = null;
         try{
+            connection = instance.getConnection();
             String sql="select * from ville where idville=?  limit 1";
-            PreparedStatement prep=instance.getConnection().prepareStatement(sql);
+            PreparedStatement prep=connection.prepareStatement(sql);
             prep.setString(1,String.valueOf(id));
             ResultSet res=prep.executeQuery();
             City city=null;
             if(res.next()){
                 city = map(res);
             }
+            connection.close();
             return city;
         }
         catch (SQLException e){
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 
@@ -66,38 +92,53 @@ public class CityDAOImplementation implements IDAO<City> {
 
     @Override
     public boolean Update(City city) throws DAOException {
+        Connection connection = null;
         try{
+            connection = instance.getConnection();
             String sql="update ville set nom=? and pays_idpays=? where idville=?";
-            PreparedStatement prep=instance.getConnection().prepareStatement(sql);
+            PreparedStatement prep=connection.prepareStatement(sql);
             SetStringPrep(city,prep);
             prep.setString(3,String.valueOf(city.getID()));
-            try {
-                prep.executeUpdate();
-            }catch (Exception e){
-                return false;
-            }
+            prep.executeUpdate();
+            connection.close();
             return true;
         }
         catch (SQLException e){
             throw new DAOException(e);
         }
-
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
+        }
     }
 
     @Override
     public boolean Remove(int id) throws DAOException {
+        Connection connection = null;
         try{
-            PreparedStatement prep=instance.getConnection().prepareStatement("delete from ville where idville=?");
+            connection = instance.getConnection();
+            PreparedStatement prep= connection.prepareStatement("delete from ville where idville=?");
             prep.setString(1, String.valueOf(id));
-            try{
-                prep.executeUpdate();
-            }catch (Exception e){
-                return  false;
-            }
+            prep.executeUpdate();
+            connection.close();
             return true;
         }
         catch (SQLException e){
             throw new DAOException(e);
+        }
+        finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException throwables) {
+                    throw new DAOException(throwables);
+                }
+            }
         }
     }
 
