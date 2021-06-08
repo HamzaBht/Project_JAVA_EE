@@ -38,14 +38,20 @@ public class FlightProvider {
                     isCityArriveeValid = query.getArrival().getCity().getName().equalsIgnoreCase(flight.getArrivalInfo().getAirport().getCity().getName());
                     isDateDepartValid = query.getDeparture().getDate().equals(flight.getDepartureInfo().getDate());
                     isClasseValid = (query.getCabineClass() == flight.getCabine().getType());
-                    if(isCityDepartValid &&isDateDepartValid && isClasseValid){
-                        QueryResult queryResult = new QueryResult();
-                        queryResult.setFlight(flight);
-                        queryResult.setAirlineName(flightAPI.getName());
-                        queryResult.setTargetWebsiteURL(flightAPI.getURL());
-                        queryResult.setIcon(flightAPI.getIconLocation());
-                        queryResults.add(queryResult);
-                    }
+                    QueryResult queryResult = new QueryResult();
+                    queryResult.setFlight(flight);
+                    queryResult.setAirlineName(flightAPI.getName());
+                    queryResult.setTargetWebsiteURL(flightAPI.getURL());
+                    queryResult.setIcon(flightAPI.getIconLocation());
+                    queryResults.add(queryResult);
+//                    if(isCityDepartValid &&isDateDepartValid && isClasseValid){
+//                        QueryResult queryResult = new QueryResult();
+//                        queryResult.setFlight(flight);
+//                        queryResult.setAirlineName(flightAPI.getName());
+//                        queryResult.setTargetWebsiteURL(flightAPI.getURL());
+//                        queryResult.setIcon(flightAPI.getIconLocation());
+//                        queryResults.add(queryResult);
+//                    }
                 }
             }
             catch (Exception e){

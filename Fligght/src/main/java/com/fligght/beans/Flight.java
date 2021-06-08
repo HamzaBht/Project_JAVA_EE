@@ -1,6 +1,14 @@
 package com.fligght.beans;
 
 public class Flight {
+    private int flightNumber;
+    private Cabine cabine;
+    private DepartureArrivalInfo departureInfo;
+    private DepartureArrivalInfo arrivalInfo;
+    private Double price;
+    private boolean available = false;
+
+
     public int getFlightNumber() {
         return flightNumber;
     }
@@ -52,14 +60,4 @@ public class Flight {
         String duration = hours + "h "+ minutes + "min";
         return duration;
     }
-
-    private int flightNumber;
-
-    private Cabine cabine;
-
-    private DepartureArrivalInfo departureInfo;
-    private DepartureArrivalInfo arrivalInfo;
-    private Double price;
-    private boolean available = false;
-
 }
