@@ -54,7 +54,14 @@ public class Flight {
     }
 
     public String CalculateDuration(){
-        int diffMinutes = arrivalInfo.getHourInMinutes() - departureInfo.getHourInMinutes();
+        int arrivalHourInMin = arrivalInfo.getHourInMinutes();
+        int departHourInMin = departureInfo.getHourInMinutes();
+        int diffMinutes;
+        if (arrivalHourInMin < departHourInMin)
+        {
+            diffMinutes = 24*60-departHourInMin + arrivalHourInMin;
+        }
+        else diffMinutes = arrivalHourInMin - departHourInMin;
         int hours = diffMinutes / 60;
         int minutes = diffMinutes % 60;
         String duration = hours + "h "+ minutes + "min";

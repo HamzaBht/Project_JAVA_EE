@@ -1,5 +1,6 @@
 package com.fligght.api;
 
+import com.fligght.api.implementations.KamehamehaAPI;
 import com.fligght.api.implementations.OngaBungaAPI;
 
 import java.util.ArrayList;
@@ -9,8 +10,9 @@ public class APIsProvider {
     static APIsProvider instance;
     private APIsProvider(){
         flightAPIs = new ArrayList<>();
-        OngaBungaAPI ongaBungaAPI = new OngaBungaAPI();
-        flightAPIs.add(ongaBungaAPI);
+        OngaBungaAPI ongaBungaAPI = OngaBungaAPI.getInstance();
+        KamehamehaAPI kamehamehaAPI = KamehamehaAPI.getInstance();
+        flightAPIs.add(kamehamehaAPI);
     }
 
     public static APIsProvider getInstance() {

@@ -1,5 +1,6 @@
 package com.fligght.controllers;
 
+import com.fligght.api.implementations.KamehamehaAPI;
 import com.fligght.beans.CabineClass;
 import com.fligght.beans.City;
 import com.fligght.beans.QueryResult;
@@ -32,7 +33,7 @@ public class SearchRequestController {
 
     private static SearchQuery GetSearchQueryFromRequest(String from, String to,String departDateReq,
                                                   String returnDateReq,String classType){
-        LocalDate departDate = LocalDate.parse(departDateReq);
+        LocalDate departDate = (!departDateReq.equals("")) ? LocalDate.parse(departDateReq) : null;
         LocalDate returnDate = (!returnDateReq.equals("")) ? LocalDate.parse(returnDateReq) : null;
         CabineClass cabineClass;
         switch (classType){
@@ -64,6 +65,7 @@ public class SearchRequestController {
         arrival.setCity(city);
 
         query.setArrival(arrival);
+        String jsonQuery = KamehamehaAPI.getInstance().SearchQueryToJson(query);
         return query;
     }
 }

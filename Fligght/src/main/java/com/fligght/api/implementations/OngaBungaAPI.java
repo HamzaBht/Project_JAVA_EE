@@ -16,14 +16,14 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class OngaBungaAPI implements IFlightAPI {
-    private final String URI = "http://localhost:8081/api/flights";
+    private final String URI = "http://localhost:8082/api/flights";
     private final String Name = "OngaBunga";
     private final String URL = "";
     private final String iconLocation = "ressource/images/RAM.png";
     static OngaBungaAPI instance;
     Client client;
 
-    public OngaBungaAPI() {
+    private OngaBungaAPI() {
         client = ClientBuilder.newClient();
     }
 
@@ -36,7 +36,7 @@ public class OngaBungaAPI implements IFlightAPI {
 
 
     @Override
-    public ArrayList<Flight> GetFlights() {
+    public ArrayList<Flight> GetFlights(SearchQuery query) {
         String respond = GetJsonFromAPI();
         ArrayList<Flight> flights = GetFlightsFromJsonArray(respond);
         return flights;
