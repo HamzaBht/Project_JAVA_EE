@@ -4,12 +4,4 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <display-name>Fligght</display-name>
-    <servlet>
-        <servlet-name>Search Request</servlet-name>
-        <servlet-class>com.fligght.servlets.SearchRequest</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Search Request</servlet-name>
-        <url-pattern>/Book</url-pattern>
-    </servlet-mapping>
 </web-app>
