@@ -31,7 +31,7 @@ public class SearchRequestController {
         }
     }
 
-    private static SearchQuery GetSearchQueryFromRequest(String from, String to,String departDateReq,
+    public static SearchQuery GetSearchQueryFromRequest(String from, String to,String departDateReq,
                                                   String returnDateReq,String classType){
         LocalDate departDate = (!departDateReq.equals("")) ? LocalDate.parse(departDateReq) : null;
         LocalDate returnDate = (!returnDateReq.equals("")) ? LocalDate.parse(returnDateReq) : null;
@@ -65,7 +65,6 @@ public class SearchRequestController {
         arrival.setCity(city);
 
         query.setArrival(arrival);
-        String jsonQuery = KamehamehaAPI.getInstance().SearchQueryToJson(query);
         return query;
     }
 }
