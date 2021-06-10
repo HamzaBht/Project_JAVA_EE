@@ -1,6 +1,14 @@
 package com.fligght.beans;
 
 public class Flight {
+    private int flightNumber;
+    private Cabine cabine;
+    private DepartureArrivalInfo departureInfo;
+    private DepartureArrivalInfo arrivalInfo;
+    private Double price;
+    private boolean available = false;
+
+
     public int getFlightNumber() {
         return flightNumber;
     }
@@ -46,20 +54,17 @@ public class Flight {
     }
 
     public String CalculateDuration(){
-        int diffMinutes = arrivalInfo.getHourInMinutes() - departureInfo.getHourInMinutes();
+        int arrivalHourInMin = arrivalInfo.getHourInMinutes();
+        int departHourInMin = departureInfo.getHourInMinutes();
+        int diffMinutes;
+        if (arrivalHourInMin < departHourInMin)
+        {
+            diffMinutes = 24*60-departHourInMin + arrivalHourInMin;
+        }
+        else diffMinutes = arrivalHourInMin - departHourInMin;
         int hours = diffMinutes / 60;
         int minutes = diffMinutes % 60;
         String duration = hours + "h "+ minutes + "min";
         return duration;
     }
-
-    private int flightNumber;
-
-    private Cabine cabine;
-
-    private DepartureArrivalInfo departureInfo;
-    private DepartureArrivalInfo arrivalInfo;
-    private Double price;
-    private boolean available = false;
-
 }
