@@ -13,6 +13,7 @@ public class APIsProvider {
         OngaBungaAPI ongaBungaAPI = OngaBungaAPI.getInstance();
         KamehamehaAPI kamehamehaAPI = KamehamehaAPI.getInstance();
         flightAPIs.add(kamehamehaAPI);
+        flightAPIs.add(ongaBungaAPI);
     }
 
     public static APIsProvider getInstance() {
